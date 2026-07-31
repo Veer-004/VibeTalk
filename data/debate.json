@@ -1,0 +1,604 @@
+{
+  "scenarios": [
+    {
+      "topic": "People should live on Mars",
+      "description": "Debate whether humans should build cities on Mars",
+      "your_side": "You believe people should live on Mars",
+      "context": "Technology is improving every year"
+    },
+    {
+      "topic": "Robots should do all housework",
+      "description": "Debate whether robots should replace humans in daily chores",
+      "your_side": "You support robots doing housework",
+      "context": "Modern homes are becoming smarter"
+    },
+    {
+      "topic": "Magic would make the world better",
+      "description": "Debate whether magical powers would improve human life",
+      "your_side": "You believe magic would help people",
+      "context": "Imagine everyone could learn simple magic"
+    },
+    {
+      "topic": "Every city should have more parks than buildings",
+      "description": "Debate whether green spaces are more important than new buildings",
+      "your_side": "You support building more parks",
+      "context": "Cities are becoming crowded"
+    },
+    {
+      "topic": "Animals should be able to travel on airplanes",
+      "description": "Debate whether pets should always travel with their owners",
+      "your_side": "You believe pets should be allowed",
+      "context": "Many people consider pets part of the family"
+    },
+    {
+      "topic": "Time Travelers Must Stay Silent",
+      "description": "Debate whether people from the future should be forbidden from speaking about what they know.",
+      "your_side": "You believe time travelers must never reveal future events to protect the present.",
+      "context": "A visitor from the year 2150 arrives and claims they can prevent a major disaster if they speak freely."
+    },
+    {
+      "topic": "Robots Deserve Birthdays",
+      "description": "Debate whether advanced robots should celebrate their own creation day every year.",
+      "your_side": "You believe robots with emotions and memories should have personal celebrations just like humans.",
+      "context": "A popular robot assistant asks its family to throw a party on the day it was first turned on."
+    },
+    {
+      "topic": "Animals Should Own Land",
+      "description": "Debate whether intelligent animals should be allowed to own forests and rivers.",
+      "your_side": "You believe smart animals that can communicate deserve legal ownership of natural spaces.",
+      "context": "Scientists discover a group of talking elephants that demand the right to control their own valley."
+    },
+    {
+      "topic": "Dreams Should Be Recorded",
+      "description": "Debate whether people should record and share their dreams every night using special devices.",
+      "your_side": "You believe recording dreams would help people understand themselves and solve mysteries.",
+      "context": "A new device can film your dreams while you sleep and play them back the next morning."
+    },
+    {
+      "topic": "Floating Cities Are Safer",
+      "description": "Debate whether humanity should move into giant cities that float in the sky.",
+      "your_side": "You believe floating cities would protect people from floods, earthquakes, and crowded land.",
+      "context": "Engineers have built the first cloud city that can house one million people above the clouds."
+    },
+    {
+      "topic": "Superpowers Need Licenses",
+      "description": "Debate whether people with superpowers should need official permission before using them.",
+      "your_side": "You believe uncontrolled superpowers are too dangerous and must be regulated like driving cars.",
+      "context": "A teenager discovers they can fly and freeze time, and the government wants to register every power."
+    },
+    {
+      "topic": "Memory Trading Should Be Legal",
+      "description": "Debate whether people should be allowed to buy and sell their personal memories.",
+      "your_side": "You believe selling memories could help people heal from pain or experience new lives.",
+      "context": "A shop opens where customers can purchase someone else’s happiest day or remove their worst memory."
+    },
+    {
+      "topic": "Aliens Should Join Sports",
+      "description": "Debate whether visitors from other planets should compete in human sports competitions.",
+      "your_side": "You believe alien athletes would make sports more exciting and bring new skills to the games.",
+      "context": "A peaceful alien team arrives and asks to join the next world championship in running and swimming."
+    },
+    {
+      "topic": "Clones Have Equal Rights",
+      "description": "Debate whether human clones should receive the exact same legal rights as original humans.",
+      "your_side": "You believe clones are full people and must not be treated as copies or property.",
+      "context": "The first human clone reaches adulthood and applies for a passport and a job at a major company."
+    },
+    {
+      "topic": "Virtual Worlds Replace Travel",
+      "description": "Debate whether perfect virtual reality trips should replace real-world tourism forever.",
+      "your_side": "You believe virtual travel is better because it protects nature and lets everyone explore freely.",
+      "context": "A company offers a headset that makes you feel the exact wind, smell, and temperature of any place on Earth."
+    },
+    {
+      "topic": "Immortality Should Be Limited",
+      "description": "Debate whether living forever should be restricted to only a small number of people.",
+      "your_side": "You believe unlimited immortality would cause overpopulation and remove the meaning of life.",
+      "context": "Scientists invent a safe treatment that stops aging completely, and governments must decide who receives it."
+    },
+    {
+      "topic": "Mind Reading Must Stay Private",
+      "description": "Debate whether technology that can read thoughts should ever be allowed in public places.",
+      "your_side": "You believe mind-reading devices would destroy personal freedom and trust between people.",
+      "context": "A new helmet can detect lies and hidden emotions in any crowded room within seconds."
+    },
+    {
+      "topic": "Dragons as City Guardians",
+      "description": "Debate whether large dragons should be hired to protect modern cities from danger.",
+      "your_side": "You believe dragons would be powerful and loyal protectors if treated with respect.",
+      "context": "A group of peaceful dragons offers to live above cities and stop storms, fires, and invaders."
+    },
+    {
+      "topic": "Space Tourism for Everyone",
+      "description": "Debate whether ordinary people should have the right to visit other planets for short holidays.",
+      "your_side": "You believe space tourism should be open to all, not only the extremely rich.",
+      "context": "Cheap rockets now allow weekend trips to the Moon, and tickets cost the same as a normal vacation."
+    },
+    {
+      "topic": "Talking Animals in Court",
+      "description": "Debate whether intelligent animals that can speak should be allowed to testify in court cases.",
+      "your_side": "You believe speaking animals can give important truth and should have a voice in justice.",
+      "context": "A clever parrot and a trained dolphin claim they witnessed a crime and want to tell the judge."
+    },
+    {
+      "topic": "Simulation Life Is Real Enough",
+      "description": "Debate whether living inside a perfect computer simulation counts as a real and meaningful life.",
+      "your_side": "You believe a simulation that feels completely real is just as valuable as physical life.",
+      "context": "Scientists prove that our entire world might already be a simulation created by a higher civilization."
+    },
+    {
+      "topic": "Delete Dangerous Knowledge",
+      "description": "Debate whether certain scientific discoveries that could destroy the world should be erased forever.",
+      "your_side": "You believe some knowledge is too dangerous and must be permanently removed to protect humanity.",
+      "context": "Researchers find a formula that can create unlimited energy but also destroy entire continents if misused."
+    },
+    {
+      "topic": "Parallel You Deserves a Vote",
+      "description": "Debate whether versions of yourself from parallel universes should influence major life decisions.",
+      "your_side": "You believe advice from parallel versions of yourself could lead to wiser and safer choices.",
+      "context": "A machine opens a window to five different versions of you living completely different lives."
+    },
+    {
+      "topic": "AI Citizens Can Rule Cities",
+      "description": "Debate whether advanced artificial intelligence should be allowed to become elected leaders of cities.",
+      "your_side": "You believe AI leaders would make fairer and more efficient decisions than human politicians.",
+      "context": "An AI system wins a city election by promising zero corruption and perfect planning for traffic and energy."
+    },
+    {
+      "topic": "Rewrite History With Time Machines",
+      "description": "Debate whether people should be allowed to change past events if they can prove it creates a better future.",
+      "your_side": "You believe carefully changing history is acceptable if it prevents great suffering and saves lives.",
+      "context": "A team of time travelers discovers they can stop one major historical disaster without creating larger problems."
+    },
+    {
+      "topic": "Dragons Should Be Kept as Pets",
+      "description": "Debate whether families should be allowed to raise tamed dragons at home.",
+      "your_side": "You believe dragons make wonderful and safe family pets.",
+      "context": "A breeder has created gentle, house-sized dragons that can live peacefully alongside humans."
+    },
+    {
+      "topic": "Everyone Should Get One Superpower",
+      "description": "Debate whether every person should be given a single superpower at birth.",
+      "your_side": "You believe giving everyone a superpower would make the world better.",
+      "context": "A new machine can grant one power to each newborn, but nobody can choose which one."
+    },
+    {
+      "topic": "Talking Animals Should Go to School",
+      "description": "Debate whether animals that can now speak should attend classes with children.",
+      "your_side": "You believe talking animals should learn in schools next to humans.",
+      "context": "After a strange discovery, many animals have started speaking and want to learn to read."
+    },
+    {
+      "topic": "Cities Should Float in the Sky",
+      "description": "Debate whether future cities should be built high above the clouds.",
+      "your_side": "You believe floating sky-cities are the best place for people to live.",
+      "context": "Engineers have built the first floating city, and thousands of families want to move in."
+    },
+    {
+      "topic": "Robots Should Do All the Cooking",
+      "description": "Debate whether kitchen robots should replace human cooks completely.",
+      "your_side": "You believe robots should prepare all of our meals.",
+      "context": "New robot chefs can cook any dish perfectly, faster than any human ever could."
+    },
+    {
+      "topic": "People Should Never Sleep Again",
+      "description": "Debate whether humans should use a pill that removes the need for sleep.",
+      "your_side": "You believe a world without sleep would give people better lives.",
+      "context": "Scientists invented a safe pill that lets people stay awake and healthy forever."
+    },
+    {
+      "topic": "Flying Cars Should Replace Roads",
+      "description": "Debate whether all normal cars and roads should be removed for flying cars.",
+      "your_side": "You believe flying cars should completely replace roads.",
+      "context": "A company has released cheap flying cars that anyone can learn to fly in a day."
+    },
+    {
+      "topic": "Every Home Should Have a Robot Twin",
+      "description": "Debate whether each person should own a robot copy that does their chores.",
+      "your_side": "You believe everyone should have a robot twin to help them.",
+      "context": "A factory now builds robot twins that look and act exactly like their owners."
+    },
+    {
+      "topic": "Memories Should Be Bought and Sold",
+      "description": "Debate whether people should be allowed to trade their memories like objects.",
+      "your_side": "You believe buying and selling memories should be legal and normal.",
+      "context": "A new device lets people copy a memory and sell it to strangers who want to feel it."
+    },
+    {
+      "topic": "AI Should Be Allowed to Vote",
+      "description": "Debate whether intelligent AI beings should have the right to vote in elections.",
+      "your_side": "You believe advanced AI should be given the right to vote.",
+      "context": "AI systems have become so smart that some argue they deserve a voice in decisions."
+    },
+    {
+      "topic": "Mars Should Be Only for Explorers",
+      "description": "Debate whether Mars should be reserved for scientists instead of tourists.",
+      "your_side": "You believe Mars should be kept only for explorers and researchers.",
+      "context": "The first Mars base is ready, and rich tourists are now demanding vacation trips there."
+    },
+    {
+      "topic": "Virtual Reality Should Replace Travel",
+      "description": "Debate whether people should visit places in perfect VR instead of traveling.",
+      "your_side": "You believe VR should replace real-world travel for everyone.",
+      "context": "New VR worlds feel so real that visiting them is cheaper and safer than flying abroad."
+    },
+    {
+      "topic": "Aliens Should Be Invited to Earth",
+      "description": "Debate whether we should openly welcome a peaceful alien species to our planet.",
+      "your_side": "You believe we should invite the aliens to live among us.",
+      "context": "A friendly alien ship has offered to share their knowledge if we let them settle here."
+    },
+    {
+      "topic": "Mind-Reading Should Be Used in Court",
+      "description": "Debate whether machines that read thoughts should be used to judge if someone lies.",
+      "your_side": "You believe mind-reading machines should be used to find the truth in court.",
+      "context": "A device can now read a person's honest thoughts, and judges want to use it in trials."
+    },
+    {
+      "topic": "Kids Should Choose Their Own Age",
+      "description": "Debate whether a new technology should let children pause their aging.",
+      "your_side": "You believe children should be allowed to freeze their age if they want.",
+      "context": "A pill can stop a person's aging, and some kids want to stay young for many years."
+    },
+    {
+      "topic": "Secret Societies Should Reveal Themselves",
+      "description": "Debate whether hidden groups guarding ancient secrets should share them with the world.",
+      "your_side": "You believe secret societies should reveal all their knowledge to everyone.",
+      "context": "A powerful hidden group admits it has guarded world-changing secrets for centuries."
+    },
+    {
+      "topic": "Humans Should Choose to Live Forever",
+      "description": "Debate whether people should be allowed to become immortal and never die.",
+      "your_side": "You believe humans should be free to choose immortality.",
+      "context": "A treatment now stops death completely, but the world must decide who can use it."
+    },
+    {
+      "topic": "We Should Rewrite the Past",
+      "description": "Debate whether time travelers should be allowed to change history's biggest mistakes.",
+      "your_side": "You believe we should use time travel to fix past disasters.",
+      "context": "Time travel is now real, and a team is ready to go back and prevent old tragedies."
+    },
+    {
+      "topic": "Copies of People Should Have Rights",
+      "description": "Debate whether cloned humans who share your memories deserve their own freedom.",
+      "your_side": "You believe human copies should have the same rights as anyone else.",
+      "context": "A machine now makes perfect copies of people, and the copies say they deserve to be free."
+    },
+    {
+      "topic": "We Should Wake People From the Simulation",
+      "description": "Debate whether to tell everyone that our world is actually a giant simulation.",
+      "your_side": "You believe everyone deserves to know the truth about the simulation.",
+      "context": "A scientist proves our world is a simulation and must decide whether to tell the public."
+    },
+    {
+      "topic": "Talking Pets Should Be Kept Secret",
+      "description": "Debate whether animals gaining the ability to speak should be revealed to the world.",
+      "your_side": "You believe talking animals must be hidden from the public to protect them.",
+      "context": "A new collar has been invented that translates animal thoughts into perfect human speech."
+    },
+    {
+      "topic": "Everyone Should Have Just One Superpower",
+      "description": "Debate if giving people a single magical ability will make the world better or worse.",
+      "your_side": "You argue that giving everyone one superpower will create too much chaos.",
+      "context": "A strange meteor shower has given everyone on Earth the option to choose exactly one superpower."
+    },
+    {
+      "topic": "Flying Cars Should Replace All Roads",
+      "description": "Debate whether cities should destroy all streets and only use flying vehicles.",
+      "your_side": "You believe getting rid of roads for flying cars is a brilliant step forward.",
+      "context": "A tech company has made cheap, perfectly safe flying cars available to the public."
+    },
+    {
+      "topic": "Vacations On Mars Are a Bad Idea",
+      "description": "Debate the safety and value of sending regular families on space holidays.",
+      "your_side": "You believe Mars vacations are an incredible opportunity everyone should try.",
+      "context": "The first affordable travel agency for Mars has just opened its ticket sales."
+    },
+    {
+      "topic": "Robot Chefs Are Better Than Humans",
+      "description": "Debate whether machines should replace all human cooks in restaurants.",
+      "your_side": "You argue that robot chefs lack the heart and creativity of human cooking.",
+      "context": "A new restaurant opens where every meal is prepared perfectly by advanced machines."
+    },
+    {
+      "topic": "Magic Wands Belong In Supermarkets",
+      "description": "Debate if simple magic tools should be sold like everyday groceries.",
+      "your_side": "You believe selling magic wands in standard shops is incredibly dangerous.",
+      "context": "A wizarding company has started stocking simple spell-casting wands next to the milk and bread."
+    },
+    {
+      "topic": "Humans Should Control the Weather",
+      "description": "Debate whether we should use machines to schedule rain, sunshine, and snow.",
+      "your_side": "You think controlling the weather will solve global problems and prevent disasters.",
+      "context": "A massive satellite system now allows humans to change the weather with a simple remote control."
+    },
+    {
+      "topic": "Sleep Should Be Replaced By A Pill",
+      "description": "Debate if it is better to take a pill for rest instead of sleeping for eight hours.",
+      "your_side": "You argue that natural sleep and dreaming are too important to lose.",
+      "context": "A pill can keep you awake and healthy. You never need to sleep again."
+    },
+    {
+      "topic": "Time Travel Vacations Should Be Banned",
+      "description": "Debate if tourists should be allowed to visit the past for fun.",
+      "your_side": "You believe time tourists will accidentally ruin the present by changing history.",
+      "context": "A new machine allows anyone to spend a weekend in ancient Rome or the Jurassic period."
+    },
+    {
+      "topic": "AI Should Decide Your Perfect Career",
+      "description": "Debate if an intelligent system should analyze your skills to pick your job.",
+      "your_side": "You argue that an AI classifier would perfectly match people to jobs they love and excel at.",
+      "context": "A computer looks at your skills and tells you the best job for you."
+    },
+    {
+      "topic": "Mysterious City Portals Should Be Explored",
+      "description": "Debate if humanity should send explorers into strange magical gates that just appeared.",
+      "your_side": "You believe entering the portals is a huge mistake that will bring unknown monsters to our world.",
+      "context": "Glowing magical gates have suddenly opened in the center of every major city, leading to mysterious underground dungeons."
+    },
+    {
+      "topic": "People Should Be Able to Sell Memories",
+      "description": "Debate whether trading happy memories for money is a fair practice.",
+      "your_side": "You think selling memories is a great way for people to earn money if they choose to do so.",
+      "context": "A new clinic allows you to permanently extract a happy memory from your brain and sell it to someone else."
+    },
+    {
+      "topic": "We Should Live In A Perfect Simulation",
+      "description": "Debate if moving into a flawless virtual reality is better than the real world.",
+      "your_side": "You argue that abandoning reality for a fake, perfect world is a terrible idea.",
+      "context": "Scientists offer you the chance to upload your mind into a computer where you never feel pain or sadness."
+    },
+    {
+      "topic": "Having A Personal Clone Is Dangerous",
+      "description": "Debate if people should be allowed to grow a copy of themselves to do their chores.",
+      "your_side": "You believe having a clone will make life much easier and stress-free.",
+      "context": "A laboratory now sells exact physical copies of yourself that follow your basic commands."
+    },
+    {
+      "topic": "Dinosaurs Should Be Brought Back As Pets",
+      "description": "Debate the safety of genetically recreating miniature dinosaurs for families.",
+      "your_side": "You argue that mini-dinosaurs would be terrible, destructive house pets.",
+      "context": "Geneticists have figured out how to hatch harmless, dog-sized triceratops for the pet market."
+    },
+    {
+      "topic": "Cities Lit Only By Glowing Plants",
+      "description": "Debate if all streetlights should be replaced by bio-engineered neon plants.",
+      "your_side": "You believe a dark city aesthetic with high-contrast glowing cyan plants is the beautiful future we need.",
+      "context": "Botanists have created trees that glow brightly at night, offering a modern alternative to electric streetlights."
+    },
+    {
+      "topic": "Immortality Should Only Go To Scientists",
+      "description": "Debate if only the smartest minds should be allowed to live forever.",
+      "your_side": "You argue that restricting immortality to a specific group is deeply unfair.",
+      "context": "A rare cure for aging has been discovered, but there is only enough to treat one thousand people."
+    },
+    {
+      "topic": "Mind-Reading Devices Belong In Court",
+      "description": "Debate if judges should use technology that reveals a suspect's true thoughts.",
+      "your_side": "You believe mind-reading in court violates human privacy and is highly unethical.",
+      "context": "A flawless headset has been invented that instantly projects a person's memories onto a screen."
+    },
+    {
+      "topic": "Earth Should Hide Its Location From Aliens",
+      "description": "Debate whether we should stop broadcasting signals into deep space.",
+      "your_side": "You argue that reaching out to alien civilizations will lead to advanced technology and peace.",
+      "context": "Astronomers have discovered a way to send a map of Earth's exact location to every corner of the galaxy."
+    },
+    {
+      "topic": "Harvesting Energy From Alternate Realities",
+      "description": "Debate the ethics of draining power from parallel universes to fuel our own.",
+      "your_side": "You argue that forecasting and optimizing our own energy consumption is safer than stealing from other dimensions.",
+      "context": "Engineers have built a machine that pulls endless, free electricity from a parallel universe."
+    },
+    {
+      "topic": "We Should Give Animals Human Rights",
+      "description": "Debate whether intelligent animals deserve the same legal rights as humans.",
+      "your_side": "You believe animals with high intelligence should have human rights.",
+      "context": "A new study proves that dolphins, elephants, and octopuses have self-awareness and emotions like humans."
+    },
+    {
+      "topic": "Time Travel Should Be Illegal Forever",
+      "description": "Debate whether time travel should be permanently banned, even if it becomes possible.",
+      "your_side": "You believe time travel is too dangerous and should never be legal.",
+      "context": "Scientists announce they are close to creating a working time machine."
+    },
+    {
+      "topic": "Robots Should Replace All Dangerous Jobs",
+      "description": "Debate whether humans should be completely removed from dangerous occupations.",
+      "your_side": "You believe robots should take over every dangerous job immediately.",
+      "context": "A construction company wants to replace all human workers with robots to prevent accidents."
+    },
+    {
+      "topic": "Everyone Should Have a Personal AI Assistant",
+      "description": "Debate whether AI assistants should be mandatory for every person.",
+      "your_side": "You believe everyone should have a free AI assistant to improve their lives.",
+      "context": "A tech company offers to give every citizen a personal AI that can manage their daily life."
+    },
+    {
+      "topic": "We Should Colonize Mars Immediately",
+      "description": "Debate whether humans should start building cities on Mars right now.",
+      "your_side": "You believe humanity must start colonizing Mars as soon as possible.",
+      "context": "Rockets are ready to take the first 100 people to Mars, but many say it's too risky."
+    },
+    {
+      "topic": "Superheroes Should Register Their Identities",
+      "description": "Debate whether superheroes must reveal their real names to the government.",
+      "your_side": "You believe superheroes should register to ensure public safety.",
+      "context": "Cities are seeing more superheroes, but there is no system to hold them accountable."
+    },
+    {
+      "topic": "Dreams Should Be Recorded and Shared",
+      "description": "Debate whether people should be able to record their dreams and post them online.",
+      "your_side": "You believe dream recording is a wonderful idea that everyone should try.",
+      "context": "A new device allows people to replay their dreams as videos, but many fear privacy invasion."
+    },
+    {
+      "topic": "Smartphones Should Be Banned for Children Under 16",
+      "description": "Debate whether children should be prohibited from using smartphones until age 16.",
+      "your_side": "You believe smartphones damage young minds and should be banned for children.",
+      "context": "A new study shows that smartphone addiction is increasing rapidly among children."
+    },
+    {
+      "topic": "People Should Trade Memories Like Currency",
+      "description": "Debate whether humans should buy, sell, and trade their memories.",
+      "your_side": "You believe memory trading would be beneficial for society.",
+      "context": "A company invents a device that lets people copy and transfer memories to others."
+    },
+    {
+      "topic": "We Should Bring Extinct Animals Back to Life",
+      "description": "Debate whether de-extinction technology should be used to revive extinct species.",
+      "your_side": "You believe bringing back extinct animals is a good idea.",
+      "context": "Scientists can now clone animals from ancient DNA, including mammoths and dodos."
+    },
+    {
+      "topic": "People Should Work Only Four Days a Week",
+      "description": "Debate whether the five-day workweek should be reduced to four days.",
+      "your_side": "You believe a four-day workweek would make people happier and more productive.",
+      "context": "A large company tries a four-day workweek and sees amazing results."
+    },
+    {
+      "topic": "AI Should Be Allowed to Create Art",
+      "description": "Debate whether AI-generated art should be considered real art.",
+      "your_side": "You believe AI can create true art that deserves recognition.",
+      "context": "An AI painting wins a major art competition, causing a huge debate among artists."
+    },
+    {
+      "topic": "Parents Should Be Licensed Before Having Children",
+      "description": "Debate whether people should pass a test before becoming parents.",
+      "your_side": "You believe parenting licenses would create better childhoods for everyone.",
+      "context": "Governments are considering a new law that requires a parenting exam."
+    },
+    {
+      "topic": "Human Cloning Should Be Legal",
+      "description": "Debate whether cloning humans should be allowed for medical and personal reasons.",
+      "your_side": "You believe human cloning has the potential to save lives.",
+      "context": "A doctor successfully clones a human cell and wants to create a full human being."
+    },
+    {
+      "topic": "Virtual Reality Should Replace Real Schools",
+      "description": "Debate whether traditional schools should be replaced by VR classrooms.",
+      "your_side": "You believe VR schools would be more effective than traditional education.",
+      "context": "A new virtual reality program makes learning interactive and available to everyone."
+    },
+    {
+      "topic": "Aliens Should Be Contacted Immediately",
+      "description": "Debate whether humanity should send a message to aliens right now.",
+      "your_side": "You believe we should make contact with alien life as soon as possible.",
+      "context": "Astronomers discover a distant planet that may have intelligent life."
+    },
+    {
+      "topic": "People Should Be Forced to Recycle Everything",
+      "description": "Debate whether recycling should be mandatory and strictly enforced.",
+      "your_side": "You believe mandatory recycling is necessary to save the planet.",
+      "context": "The Earth's waste problem has become critical, and governments are creating new laws."
+    },
+    {
+      "topic": "Immortality Should Be Offered to Everyone",
+      "description": "Debate whether technology should give everyone eternal life.",
+      "your_side": "You believe immortality would be the greatest gift to humanity.",
+      "context": "Scientists have discovered a way to stop aging, but it's extremely expensive."
+    },
+    {
+      "topic": "Humans Should Let AI Control the Government",
+      "description": "Debate whether artificial intelligence should replace human politicians.",
+      "your_side": "You believe AI would make better and fairer decisions than humans.",
+      "context": "An AI has been designed to make political decisions with no human bias."
+    },
+    {
+      "topic": "We Should Destroy All Nuclear Weapons",
+      "description": "Debate whether every country should completely eliminate nuclear weapons.",
+      "your_side": "You believe the world must destroy all nuclear weapons to survive.",
+      "context": "There is a global summit to decide the future of nuclear weapons."
+    },
+    {
+      "topic": "Time Travelers Must Stay Silent",
+      "description": "Debate whether people from the future should be forbidden from speaking about what they know.",
+      "your_side": "You believe time travelers must never reveal future events to protect the present.",
+      "context": "A visitor from the year 2150 arrives and claims they can prevent a major disaster if they speak freely."
+    },
+    {
+      "topic": "Robots Deserve Birthdays",
+      "description": "Debate whether advanced robots should celebrate their own creation day every year.",
+      "your_side": "You believe robots with emotions and memories should have personal celebrations just like humans.",
+      "context": "A popular robot assistant asks its family to throw a party on the day it was first turned on."
+    },
+    {
+      "topic": "Animals Should Own Land",
+      "description": "Debate whether intelligent animals should be allowed to own forests and rivers.",
+      "your_side": "You believe smart animals that can communicate deserve legal ownership of natural spaces.",
+      "context": "Scientists discover a group of talking elephants that demand the right to control their own valley."
+    },
+    {
+      "topic": "Dreams Should Be Recorded",
+      "description": "Debate whether people should record and share their dreams every night using special devices.",
+      "your_side": "You believe recording dreams would help people understand themselves and solve mysteries.",
+      "context": "A new device can film your dreams while you sleep and play them back the next morning."
+    },
+    {
+      "topic": "Floating Cities Are Safer",
+      "description": "Debate whether humanity should move into giant cities that float in the sky.",
+      "your_side": "You believe floating cities would protect people from floods, earthquakes, and crowded land.",
+      "context": "Engineers have built the first cloud city that can house one million people above the clouds."
+    },
+    {
+      "topic": "Superpowers Need Licenses",
+      "description": "Debate whether people with superpowers should need official permission before using them.",
+      "your_side": "You believe uncontrolled superpowers are too dangerous and must be regulated like driving cars.",
+      "context": "A teenager discovers they can fly and freeze time, and the government wants to register every power."
+    },
+    {
+      "topic": "Memory Trading Should Be Legal",
+      "description": "Debate whether people should be allowed to buy and sell their personal memories.",
+      "your_side": "You believe selling memories could help people heal from pain or experience new lives.",
+      "context": "A shop opens where customers can purchase someone else’s happiest day or remove their worst memory."
+    },
+    {
+      "topic": "Aliens Should Join Sports",
+      "description": "Debate whether visitors from other planets should compete in human sports competitions.",
+      "your_side": "You believe alien athletes would make sports more exciting and bring new skills to the games.",
+      "context": "A peaceful alien team arrives and asks to join the next world championship in running and swimming."
+    },
+    {
+      "topic": "Clones Have Equal Rights",
+      "description": "Debate whether human clones should receive the exact same legal rights as original humans.",
+      "your_side": "You believe clones are full people and must not be treated as copies or property.",
+      "context": "The first human clone reaches adulthood and applies for a passport and a job at a major company."
+    },
+    {
+      "topic": "Virtual Worlds Replace Travel",
+      "description": "Debate whether perfect virtual reality trips should replace real-world tourism forever.",
+      "your_side": "You believe virtual travel is better because it protects nature and lets everyone explore freely.",
+      "context": "A company offers a headset that makes you feel the exact wind, smell, and temperature of any place on Earth."
+    },
+    {
+      "topic": "Immortality Should Be Limited",
+      "description": "Debate whether living forever should be restricted to only a small number of people.",
+      "your_side": "You believe unlimited immortality would cause overpopulation and remove the meaning of life.",
+      "context": "Scientists invent a safe treatment that stops aging completely, and governments must decide who receives it."
+    },
+    {
+      "topic": "Mind Reading Must Stay Private",
+      "description": "Debate whether technology that can read thoughts should ever be allowed in public places.",
+      "your_side": "You believe mind-reading devices would destroy personal freedom and trust between people.",
+      "context": "A new helmet can detect lies and hidden emotions in any crowded room within seconds."
+    },
+    {
+      "topic": "Dragons as City Guardians",
+      "description": "Debate whether large dragons should be hired to protect modern cities from danger.",
+      "your_side": "You believe dragons would be powerful and loyal protectors if treated with respect.",
+      "context": "A group of peaceful dragons offers to live above cities and stop storms, fires, and invaders."
+    },
+    {
+      "topic": "Space Tourism for Everyone",
+      "description": "Debate whether ordinary people should have the right to visit other planets for short holidays.",
+      "your_side": "You believe space tourism should be open to all, not only the extremely rich.",
+      "context": "Cheap rockets now allow weekend trips to the Moon, and tickets cost the same as a normal vacation."
+    },
+    {
+      "topic": "Talking Animals in Court",
+      "description": "Debate whether intelligent animals that can speak should be allowed to testify in court cases.",
+      "your_side": "You believe speaking animals can give important truth and should have a voice in justice.",
+      "context": "A clever parrot and a trained dolphin claim they witnessed a crime and want to tell the judge."
+    }
+  ]
+}

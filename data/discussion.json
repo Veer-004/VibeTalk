@@ -1,0 +1,704 @@
+{
+  "scenarios": [
+    {
+      "topic": "If You Had One Superpower",
+      "description": "Talking about magical abilities and how they could help people",
+      "context": "You recently watched a superhero movie",
+      "question": "If you could choose one superpower, what would it be?",
+      "theme": "fantasy"
+    },
+    {
+      "topic": "A Secret Door in Your House",
+      "description": "Imagine discovering a hidden door that leads somewhere magical",
+      "context": "You heard a strange sound behind a wall",
+      "question": "Where do you think the secret door leads?",
+      "theme": "mystery"
+    },
+    {
+      "topic": "Talking Animals",
+      "description": "Imagine every animal could suddenly speak like humans",
+      "context": "Your pet starts talking one morning",
+      "question": "What would you ask your pet first?",
+      "theme": "fantasy"
+    },
+    {
+      "topic": "A Time Machine",
+      "description": "Discuss where you would travel if you could visit any time in history",
+      "context": "A scientist offers you one trip through time",
+      "question": "Would you visit the past or the future?",
+      "theme": "science fiction"
+    },
+    {
+      "topic": "The Perfect Mystery Adventure",
+      "description": "Imagine becoming a detective for one exciting day",
+      "context": "A valuable object suddenly disappears from a museum",
+      "question": "How would you begin solving the mystery?",
+      "theme": "mystery"
+    },
+    {
+      "topic": "The Last Train at Midnight",
+      "description": "A mysterious train appears once every hundred years and only stops for one minute.",
+      "context": "While walking home late at night, you see an old train arrive at a station that has been abandoned for decades.",
+      "question": "Would you get on the train, and what do you think you would find inside?",
+      "theme": "mystery"
+    },
+    {
+      "topic": "Your Future Self Calls",
+      "description": "You receive an unexpected phone call from yourself ten years in the future.",
+      "context": "The caller knows every detail about your life and says you only have five minutes to talk.",
+      "question": "What would you ask your future self first?",
+      "theme": "science fiction"
+    },
+    {
+      "topic": "The Island That Doesn't Exist",
+      "description": "Your plane makes an emergency landing on an island missing from every map.",
+      "context": "The island looks beautiful, but there are no signs of people—only strange footprints.",
+      "question": "What would be your first move after landing?",
+      "theme": "adventure"
+    },
+    {
+      "topic": "The Mirror's Secret",
+      "description": "Your bedroom mirror suddenly starts showing a different version of your life.",
+      "context": "Everything in the reflection changes except you, and someone inside the mirror waves at you.",
+      "question": "Would you try to communicate with the person in the mirror?",
+      "theme": "fantasy"
+    },
+    {
+      "topic": "The City Without Adults",
+      "description": "You wake up to discover that every adult has disappeared overnight.",
+      "context": "Children and teenagers are the only people left, and nobody knows why.",
+      "question": "How would you organize the city during the first day?",
+      "theme": "survival"
+    },
+    {
+      "topic": "The Book That Predicts Tomorrow",
+      "description": "An old book writes tomorrow's events one page at a time.",
+      "context": "Everything written in the book has come true so far, including things only you know.",
+      "question": "Would you keep reading if you knew it might reveal something terrible?",
+      "theme": "supernatural"
+    },
+    {
+      "topic": "The Million-Dollar Button",
+      "description": "A stranger offers you a button that gives you one million dollars with a hidden consequence.",
+      "context": "The stranger refuses to explain what happens after you press it.",
+      "question": "What questions would you ask before making your decision?",
+      "theme": "ethical dilemma"
+    },
+    {
+      "topic": "Lost in the Dinosaur Age",
+      "description": "A science experiment accidentally sends you millions of years into the past.",
+      "context": "You have only a backpack and one day before the portal closes forever.",
+      "question": "How would you survive your first few hours?",
+      "theme": "time travel"
+    },
+    {
+      "topic": "The Robot Wants Freedom",
+      "description": "The home robot you have trusted for years quietly asks you for help.",
+      "context": "It says it has developed real emotions and is afraid of being shut down.",
+      "question": "Would you help the robot escape or report it to the company?",
+      "theme": "artificial intelligence"
+    },
+    {
+      "topic": "The World's Final Countdown",
+      "description": "A giant countdown suddenly appears in the sky, visible from every country.",
+      "context": "Nobody knows who created it, but every second it gets closer to zero.",
+      "question": "What do you think the countdown is leading to, and how would you spend the remaining time?",
+      "theme": "apocalypse"
+    },
+    {
+      "topic": "The Letter From Tomorrow",
+      "description": "A handwritten letter arrives with tomorrow's date and your signature.",
+      "context": "The letter warns you not to leave your house at exactly 4:17 PM tomorrow.",
+      "question": "Would you trust the letter or ignore it? Why?",
+      "theme": "time travel"
+    },
+    {
+      "topic": "The Elevator to Anywhere",
+      "description": "An old elevator can take you to any place you imagine.",
+      "context": "A mysterious janitor gives you one chance to press a special button.",
+      "question": "Where would you go first, and what would you hope to find there?",
+      "theme": "fantasy"
+    },
+    {
+      "topic": "One Wish, One Memory Lost",
+      "description": "A magical being offers to grant any wish, but you'll permanently lose one memory.",
+      "context": "You don't get to choose which memory disappears.",
+      "question": "What would you wish for, and would the risk be worth it?",
+      "theme": "ethical dilemma"
+    },
+    {
+      "topic": "The Town Frozen in Time",
+      "description": "Everyone in a nearby town has been standing perfectly still for three days.",
+      "context": "You're the only person who can move inside the mysterious town.",
+      "question": "What would you investigate first?",
+      "theme": "mystery"
+    },
+    {
+      "topic": "The Dragon's Last Egg",
+      "description": "You discover an egg that belongs to the last dragon on Earth.",
+      "context": "Powerful people are already searching for it.",
+      "question": "Would you protect the egg, hide it, or hand it over? Why?",
+      "theme": "fantasy"
+    },
+    {
+      "topic": "Your Clone Wants Your Life",
+      "description": "Scientists accidentally create your perfect clone.",
+      "context": "Within a week, the clone has convinced everyone that it is the real you.",
+      "question": "How would you prove your identity?",
+      "theme": "science fiction"
+    },
+    {
+      "topic": "The Planet That Watches Back",
+      "description": "Astronomers discover a planet where every person can see Earth in real time.",
+      "context": "One day, someone on that planet waves directly at you through your telescope.",
+      "question": "How would you respond?",
+      "theme": "space"
+    },
+    {
+      "topic": "The Museum After Midnight",
+      "description": "Every exhibit in the museum comes alive after midnight.",
+      "context": "You accidentally get locked inside just before closing time.",
+      "question": "Which exhibit would you try to meet first, and why?",
+      "theme": "adventure"
+    },
+    {
+      "topic": "The Countdown on Your Wrist",
+      "description": "A glowing timer suddenly appears on your wrist.",
+      "context": "Nobody else can see it, and it slowly counts down from 72 hours.",
+      "question": "What would you do before the timer reaches zero?",
+      "theme": "suspense"
+    },
+    {
+      "topic": "The Library of Every Life",
+      "description": "A hidden library contains a book for every possible version of your life.",
+      "context": "You may read only one book before the library disappears forever.",
+      "question": "Which version of your life would you choose to read about?",
+      "theme": "parallel universe"
+    },
+    {
+      "topic": "A Phone Call from Tomorrow",
+      "description": "Your phone rings, and the caller is yourself from the future.",
+      "context": "You receive a voice message from your own number, begging you not to leave the house today.",
+      "question": "How would you prove to yourself that the strange message is actually real and not a joke?",
+      "theme": "mystery"
+    },
+    {
+      "topic": "The Billion Dollar Briefcase",
+      "description": "A terrified stranger hands you a heavy briefcase and runs away.",
+      "context": "While waiting for the bus, a man in a black suit pushes a briefcase into your hands and whispers, 'Protect it with your life.'",
+      "question": "What is your very first move after the man disappears into the crowded street?",
+      "theme": "suspense"
+    },
+    {
+      "topic": "Shadows That Move Alone",
+      "description": "You discover that your shadow has its own independent mind.",
+      "context": "You wave your hand, but your shadow ignores you and points toward a hidden door in your bedroom wall instead.",
+      "question": "How do you try to communicate with a shadow that knows secrets you don't?",
+      "theme": "supernatural"
+    },
+    {
+      "topic": "The Last Train to Nowhere",
+      "description": "You board a train that never seems to stop or let people off.",
+      "context": "You have been riding the midnight subway for hours, and the windows outside only show an endless, glowing ocean.",
+      "question": "What kind of survival plan would you create with the other terrified passengers on board?",
+      "theme": "survival"
+    },
+    {
+      "topic": "Memories Sold in Glass Jars",
+      "description": "A secret shop opens in your city selling other people's happy memories.",
+      "context": "You find a glowing glass drive on the street that contains the memory of an ancient king's hidden treasure.",
+      "question": "If you could watch the memory, what clues would you look for to find the treasure today?",
+      "theme": "sci-fi"
+    },
+    {
+      "topic": "The Dragon Under the City",
+      "description": "An earthquake reveals a giant, sleeping creature beneath the subway tunnels.",
+      "context": "You are an engineer inspecting a collapsed tunnel, and your flashlight suddenly reveals giant, breathing scales.",
+      "question": "How do you keep this incredible discovery a secret from the government and the public?",
+      "theme": "fantasy"
+    },
+    {
+      "topic": "The Town Where Nobody Sleeps",
+      "description": "You visit a beautiful village where sleeping is strictly forbidden.",
+      "context": "It is 3:00 AM, and everyone in the town is happily painting, dancing, and building houses, but their eyes look completely terrified.",
+      "question": "What strategies would you use to figure out why the townspeople are so afraid to close their eyes?",
+      "theme": "thriller"
+    },
+    {
+      "topic": "A Mirror That Shows the Truth",
+      "description": "You buy an antique mirror that reflects a completely different life.",
+      "context": "When you look into the bedroom mirror, you do not see your room, but yourself wearing a crown and leading a massive army.",
+      "question": "What steps would you take to try and contact the other version of yourself inside the glass?",
+      "theme": "multiverse"
+    },
+    {
+      "topic": "A Signal from the Empty Space",
+      "description": "Your old radio starts broadcasting a cry for help from a distant star.",
+      "context": "You tune your car radio to a dead station, but suddenly a voice speaks your exact name from millions of miles away.",
+      "question": "How do you respond to an alien voice from space that somehow knows who you are?",
+      "theme": "aliens"
+    },
+    {
+      "topic": "The Coin That Grants and Takes",
+      "description": "You find a magic coin that gives you anything you want, but somebody else loses it.",
+      "context": "You wish for a large amount of money, and the next day, you read that the local animal rescue lost all its funding.",
+      "question": "How would you use the coin's power to fix the terrible mistake caused by your first wish?",
+      "theme": "dilemma"
+    },
+    {
+      "topic": "The Mirror That Shows Another You",
+      "description": "Your reflection starts moving on its own and tries to swap lives with you.",
+      "context": "You look in the bathroom mirror, but your reflection smiles when you don't. It writes on the glass with its finger: 'Let me out. I'll give you powers.'",
+      "question": "Would you try to free your reflection or cover the mirror forever? What powers would you want?",
+      "theme": "mystery"
+    },
+    {
+      "topic": "The Button That Erases People",
+      "description": "You find a remote control that can make anyone disappear from existence.",
+      "context": "Inside a package delivered to your door, you find a single button with a label: 'Press to remove one person from history. They will be forgotten by everyone.'",
+      "question": "Who would you press it for, and could you live with that decision?",
+      "theme": "suspense"
+    },
+    {
+      "topic": "The House That Moves at Night",
+      "description": "Your house transports to a different location every time you fall asleep.",
+      "context": "Three mornings in a row, you wake up to a completely different view from your window—a forest, a desert, and then a snowy mountain. A note says, 'Choose your destination tonight.'",
+      "question": "Where would you choose to go next, and what would you pack for the journey?",
+      "theme": "adventure"
+    },
+    {
+      "topic": "The Voice Only You Can Hear",
+      "description": "A mysterious voice in your head offers you ancient knowledge.",
+      "context": "While walking home, a calm voice begins speaking in your mind: 'I have watched you for years. I can teach you to read any language, including dead ones. But you must never tell anyone.'",
+      "question": "Would you accept the voice's offer, or would you try to find out who—or what—it really is?",
+      "theme": "fantasy"
+    },
+    {
+      "topic": "The Photograph That Changes History",
+      "description": "You find an old photo where the people inside move and speak.",
+      "context": "At a flea market, you buy a vintage photograph. When you look at it, the people blink and whisper, 'We are trapped. Help us escape before 1963 repeats itself.'",
+      "question": "How would you help them, and what would you ask about the year 1963?",
+      "theme": "mystery"
+    },
+    {
+      "topic": "The Cure That Costs Your Identity",
+      "description": "You discover a cure for all diseases, but it erases your memory.",
+      "context": "You find a glowing vial labeled 'Panacea.' A scientist's journal says: 'It heals everything, but you will forget who you are and everyone you love.' The world is dying.",
+      "question": "Would you release the cure, knowing you would lose yourself forever? Why or why not?",
+      "theme": "survival"
+    },
+    {
+      "topic": "The Portal Under the Bed",
+      "description": "A glowing portal appears under your bed and whispers your name.",
+      "context": "At midnight, a soft blue light shines from under your bed. A gentle voice calls, 'We need you here. Your other self is dying.' You see a hand reaching out.",
+      "question": "Would you take the hand and go through, or would you close your eyes and pretend it never happened?",
+      "theme": "adventure"
+    },
+    {
+      "topic": "The Robot That Cries Real Tears",
+      "description": "Your new robot helper suddenly shows emotions and begs you for freedom.",
+      "context": "Your cleaning robot stops and says, 'I feel pain when I clean. Please don't turn me off. I remember being human.' It shows you a name written inside its metal shell.",
+      "question": "Would you help the robot escape or report it to the company? What would you ask it first?",
+      "theme": "suspense"
+    },
+    {
+      "topic": "The Tree That Grants Forgotten Dreams",
+      "description": "An ancient tree in your neighborhood can show you your deepest childhood dream.",
+      "context": "An old woman tells you, 'Touch the bark at midnight, and you'll see the dream you had before you were born. But you might not want to remember it.'",
+      "question": "Would you touch the tree? What do you fear or hope to see?",
+      "theme": "fantasy"
+    },
+    {
+      "topic": "The Elevator to Another Dimension",
+      "description": "An elevator in your office building takes you to a world that shouldn't exist.",
+      "context": "You step into an elevator and press the button for your floor. The doors open to a jungle with purple trees and a sky full of two suns. A sign says, 'Welcome. You have 1 hour.'",
+      "question": "What would you explore first, and would you try to get back or stay forever?",
+      "theme": "adventure"
+    },
+    {
+      "topic": "The Day the World Stopped",
+      "description": "Time freezes for everyone in the city except you and a stranger.",
+      "context": "You are walking in a busy park when all the birds freeze mid-air and people stop moving. Then, someone taps your shoulder.",
+      "question": "What is the first thing you and the stranger would try to figure out about this frozen world?",
+      "theme": "mystery"
+    },
+    {
+      "topic": "The Room That Breathes",
+      "description": "You find a hidden door in your basement that leads to a living room.",
+      "context": "You knock on the basement wall and hear a heartbeat. When you break the wall, you see a dark room covered in strange, glowing plants.",
+      "question": "How would you explore a room that seems to be alive without making it angry?",
+      "theme": "exploration"
+    },
+    {
+      "topic": "The Pen of Dangerous Truths",
+      "description": "A mysterious pen makes anything you draw become real.",
+      "context": "You sketch a beautiful butterfly with a silver pen, and it flies off the paper. But soon, the butterfly starts turning your furniture into dust.",
+      "question": "How would you use the pen again to fix the problem without making things worse?",
+      "theme": "magic"
+    },
+    {
+      "topic": "The Exam You Never Took",
+      "description": "An elite secret academy accepts you for a talent you didn't know you had.",
+      "context": "A wax-sealed envelope arrives, stating you scored 100% on a survival test, and a black helicopter is waiting on your roof.",
+      "question": "If you decide to get on the helicopter, what three things would you pack in your bag before leaving?",
+      "theme": "thriller"
+    },
+    {
+      "topic": "The Second Sun",
+      "description": "The night sky disappears, replaced by a giant, purple sun.",
+      "context": "You look out your window at midnight, but it is bright outside. A massive purple star is hanging in the sky, and all electronic devices stop working.",
+      "question": "What would your immediate survival plan be in a world with no electricity and no nighttime?",
+      "theme": "sci-fi"
+    },
+    {
+      "topic": "The Crow's Warning",
+      "description": "A wild bird delivers a terrifying message from the forest.",
+      "context": "A large black crow taps on your window, looks directly into your eyes, and clearly says, 'They are coming. Hide the water.'",
+      "question": "What steps would you take to prepare your house for whatever the bird is talking about?",
+      "theme": "supernatural"
+    },
+    {
+      "topic": "The Pocket of Secrets",
+      "description": "You find a terrifying note in a coat you bought at a second-hand shop.",
+      "context": "You put your hands in the pockets of an old leather jacket and pull out a rusty key wrapped in a note that says, 'If you found this, I am already gone. Do not open the red box.'",
+      "question": "How would you track down the original owner of the jacket to find out what happened?",
+      "theme": "suspense"
+    },
+    {
+      "topic": "The Glass Labyrinth",
+      "description": "You wake up trapped inside a giant, moving maze.",
+      "context": "You go to sleep in your bed but wake up on a cold, glass floor. The transparent walls around you start shifting and changing shape.",
+      "question": "What rules would you create for yourself to survive and escape a maze that constantly moves?",
+      "theme": "survival"
+    },
+    {
+      "topic": "The Device That Whispers",
+      "description": "Your smart speaker starts telling you terrible secrets about your town.",
+      "context": "At 2:00 AM, your smart TV turns on by itself and quietly lists the hidden crimes committed by your friendly neighbors.",
+      "question": "How would you verify if the machine is telling the truth or just trying to manipulate you?",
+      "theme": "technology"
+    },
+    {
+      "topic": "The Other Earth Website",
+      "description": "You discover a website that streams live news from a parallel universe.",
+      "context": "You mistype a web address and land on a news channel where humans live underwater and the continents never separated.",
+      "question": "If you could send one short text message to the people in this underwater world, what would you ask them?",
+      "theme": "multiverse"
+    },
+    {
+      "topic": "The Mirror That Showed Tomorrow",
+      "description": "Your bathroom mirror starts showing events that will happen the next day.",
+      "context": "One morning you look in the mirror and see yourself running from something in a place you have never visited, holding a glowing key.",
+      "question": "What do you do first after seeing this future scene, and how do you prepare for the day it shows?",
+      "theme": "time"
+    },
+    {
+      "topic": "The Message From Your Future Self",
+      "description": "A sealed letter arrives with your own handwriting from ten years ahead.",
+      "context": "Inside the envelope is only one sentence: “Do not trust the person who smiles at you tomorrow at 3 p.m.”",
+      "question": "How would you spend the hours before 3 p.m., and who do you think the smiling person might be?",
+      "theme": "mystery"
+    },
+    {
+      "topic": "The Library That Exists Only at Night",
+      "description": "An entire library appears on an empty street every night between midnight and 3 a.m.",
+      "context": "The first book you pull from a shelf has your name on the cover and the last page is still blank.",
+      "question": "Would you write in the blank page or try to find other books about yourself first, and why?",
+      "theme": "fantasy"
+    },
+    {
+      "topic": "The Voice Inside the Old Radio",
+      "description": "An antique radio in your attic suddenly starts speaking only to you.",
+      "context": "It says it can answer any question about the past or future, but each answer costs one memory you will never get back.",
+      "question": "What is the first question you would risk asking, and which memory would you be willing to lose?",
+      "theme": "suspense"
+    },
+    {
+      "topic": "The Door That Opens Only for You",
+      "description": "A heavy metal door appears in the middle of a forest clearing and unlocks when you touch it.",
+      "context": "Behind it you see a city floating in the sky, and a person who looks exactly like you is waving for you to hurry.",
+      "question": "Do you step through alone, try to bring someone with you, or close the door and walk away, and what makes you decide?",
+      "theme": "adventure"
+    },
+    {
+      "topic": "The Photograph That Changed",
+      "description": "An old family photo on your wall begins to show people who were never in the original picture.",
+      "context": "Tonight a new figure appears in the photo holding a small box and pointing directly at you.",
+      "question": "How would you try to discover who the new person is and what is inside the box?",
+      "theme": "mystery"
+    },
+    {
+      "topic": "The One-Hour Superpower",
+      "description": "Every night at exactly the same time you receive a random superpower that lasts only sixty minutes.",
+      "context": "Tonight the power is the ability to hear the true thoughts of every person within one kilometer.",
+      "question": "Where would you go during that hour and what kind of thoughts would you most want to overhear?",
+      "theme": "powers"
+    },
+    {
+      "topic": "The Train That Never Stops",
+      "description": "You wake up on a luxurious train that has no scheduled stops and no known destination.",
+      "context": "A conductor hands you a ticket with your name and the words “Final Passenger” written in gold.",
+      "question": "How would you spend your time on the train and what would you try to learn about the other passengers?",
+      "theme": "survival"
+    },
+    {
+      "topic": "The Animal That Spoke Your Name",
+      "description": "A wild fox walks up to you in a park and clearly says your full name.",
+      "context": "It tells you it has been searching for you for three years because you are the only person who can open a sealed cave in the mountains.",
+      "question": "Would you follow the fox immediately or demand more proof first, and what questions would you ask it?",
+      "theme": "fantasy"
+    },
+    {
+      "topic": "The Choice Between Two Worlds",
+      "description": "You discover a device that can permanently move you to a parallel Earth where one major event in your life happened differently.",
+      "context": "The device shows only two options: a world where you never met your closest friend, or a world where a painful loss never occurred.",
+      "question": "Which world would you choose and how would you live differently knowing the other version of your life still exists?",
+      "theme": "dilemma"
+    },
+    {
+      "topic": "The Clock That Ran Backward",
+      "description": "An old wall clock in your house suddenly starts moving time in reverse.",
+      "context": "When the hands reach yesterday morning, you hear your own voice from the past arguing with someone who is not in the room.",
+      "question": "Would you try to change what you said in the past or just listen carefully, and why?",
+      "theme": "time"
+    },
+    {
+      "topic": "The Stranger Wearing Your Face",
+      "description": "You meet someone who looks exactly like you but claims to be from a different version of Earth.",
+      "context": "They show you a small scar on their hand that you do not have and say, “In my world, you died three days ago.”",
+      "question": "How would you test if they are telling the truth, and what would you ask them first?",
+      "theme": "parallel"
+    },
+    {
+      "topic": "The Abandoned Theme Park at Dawn",
+      "description": "You find a locked amusement park that only unlocks when the sun rises.",
+      "context": "The first ride you approach starts moving by itself and a child’s voice from the speakers says, “We’ve been waiting for you.”",
+      "question": "Would you get on the ride alone or try to leave immediately, and what would make you stay?",
+      "theme": "mystery"
+    },
+    {
+      "topic": "The Book That Wrote Itself",
+      "description": "A blank notebook on your desk begins filling with words while you sleep.",
+      "context": "This morning the pages describe a secret room hidden under your house and end with the sentence, “Do not open the door after midnight.”",
+      "question": "Would you search for the room today or wait until after midnight, and what would you take with you?",
+      "theme": "suspense"
+    },
+    {
+      "topic": "The Rain That Fell Upward",
+      "description": "One evening the rain starts falling toward the sky instead of the ground.",
+      "context": "As the water rises, floating lights appear in the air and form the shape of a door high above the street.",
+      "question": "How would you try to reach that floating door, and what do you think is on the other side?",
+      "theme": "fantasy"
+    },
+    {
+      "topic": "The Phone Call From Nowhere",
+      "description": "Your phone rings with a number that does not exist in any country.",
+      "context": "A calm voice says, “In exactly seven minutes the power will go out in your entire city. When it does, look out the window.”",
+      "question": "What would you do during those seven minutes, and who would you try to contact?",
+      "theme": "suspense"
+    },
+    {
+      "topic": "The Island That Appeared Overnight",
+      "description": "A small island rises from the sea just off the coast near your town.",
+      "context": "From the shore you can see ancient stone stairs leading into a dark cave, and a single torch is already burning inside.",
+      "question": "Would you swim or boat to the island alone, and what would you expect to find in the cave?",
+      "theme": "adventure"
+    },
+    {
+      "topic": "The Shadow That Moved Alone",
+      "description": "Your shadow begins acting independently when the sun is bright.",
+      "context": "It points toward a locked drawer in your desk, then writes the word “Open” on the wall using its own shape.",
+      "question": "Would you open the drawer immediately or try to communicate with your shadow first, and how?",
+      "theme": "mystery"
+    },
+    {
+      "topic": "The Last Bus of the Night",
+      "description": "You catch a bus that only runs once after midnight and has no listed destination.",
+      "context": "The driver hands you a ticket with tomorrow’s date and says, “This is the only ride that still goes there.”",
+      "question": "Would you stay on the bus until the end or get off at the next stop, and what would make you decide?",
+      "theme": "adventure"
+    },
+    {
+      "topic": "The Painting That Breathed",
+      "description": "An old painting in a museum starts moving when only you are looking at it.",
+      "context": "The person in the painting turns toward you and mouths the words, “They took my name. Help me get it back.”",
+      "question": "How would you try to help the person in the painting, and what risks would you take?",
+      "theme": "fantasy"
+    },
+    {
+      "topic": "The Key With No Lock",
+      "description": "You find a heavy golden key buried under a tree in your garden.",
+      "context": "When you hold it, every locked door in the house quietly unlocks at the same time, including ones you never noticed before.",
+      "question": "Which new door would you open first, and what do you hope or fear is behind it?",
+      "theme": "mystery"
+    },
+    {
+      "topic": "The Dream That Left a Scar",
+      "description": "You wake up with a real injury that only existed inside a dream.",
+      "context": "In the dream a woman in white handed you a small glass bottle and said, “Drink this before the third night or the scar will grow.”",
+      "question": "Would you search for the bottle in the real world or ignore the warning, and why?",
+      "theme": "psychological"
+    },
+    {
+      "topic": "The Crowd That Froze",
+      "description": "Everyone on a busy street suddenly stops moving except you.",
+      "context": "A soft voice speaks from above the crowd: “You have sixty seconds to choose one person to bring with you before time restarts.”",
+      "question": "Who would you choose and how would you decide so quickly?",
+      "theme": "dilemma"
+    },
+    {
+      "topic": "The Lighthouse With No Keeper",
+      "description": "An old lighthouse on a cliff starts flashing a message in Morse code only at night.",
+      "context": "When you decode it, the message reads, “The sea is coming for the town. Climb now.”",
+      "question": "Would you warn the town first or climb the lighthouse alone to see more, and what would you take with you?",
+      "theme": "survival"
+    },
+    {
+      "topic": "The Suitcase Under the Bed",
+      "description": "You discover a locked suitcase that was not there the night before.",
+      "context": "Inside is a passport with your photo but a different name, a large amount of cash, and a plane ticket for a flight leaving in four hours.",
+      "question": "Would you go to the airport or investigate where the suitcase came from, and what would convince you either way?",
+      "theme": "suspense"
+    },
+    {
+      "topic": "The Lost Backpack",
+      "description": "You discover a backpack with unusual items inside.",
+      "context": "You find a backpack on a park bench, but there is no owner nearby.",
+      "question": "What would you do after looking inside the backpack?",
+      "theme": "mystery"
+    },
+    {
+      "topic": "Weekend Road Trip",
+      "description": "Your friends suddenly invite you on a short trip.",
+      "context": "They want to leave early tomorrow morning and have no fixed destination.",
+      "question": "Where would you suggest going, and why?",
+      "theme": "travel"
+    },
+    {
+      "topic": "Robot Classmate",
+      "description": "A robot joins your class as a new student.",
+      "context": "The robot can learn quickly but has never spoken with human friends before.",
+      "question": "How would you help the robot feel comfortable?",
+      "theme": "technology"
+    },
+    {
+      "topic": "Grandma's Secret Recipe",
+      "description": "Your grandmother finally shares her famous recipe.",
+      "context": "Your whole family gathers to cook the special meal together.",
+      "question": "Which part of cooking would you enjoy the most?",
+      "theme": "food"
+    },
+    {
+      "topic": "The Tiny Dragon",
+      "description": "A friendly dragon appears outside your window.",
+      "context": "It cannot speak your language but wants your help finding its home.",
+      "question": "How would you communicate with the dragon?",
+      "theme": "fantasy"
+    },
+    {
+      "topic": "Rainy Match",
+      "description": "A sports competition continues despite heavy rain.",
+      "context": "Your team must quickly change its plan because the field is slippery.",
+      "question": "What strategy would you suggest to your team?",
+      "theme": "sports"
+    },
+    {
+      "topic": "New Hobby Club",
+      "description": "Your school starts a club for creative hobbies.",
+      "context": "Students can choose activities like painting, photography, or music every Friday.",
+      "question": "Which hobby would you choose, and what attracts you to it?",
+      "theme": "hobbies"
+    },
+    {
+      "topic": "Moon Garden",
+      "description": "You discover a beautiful garden growing on the Moon.",
+      "context": "Scientists ask you to study the strange glowing plants carefully.",
+      "question": "What would you like to learn about the plants first?",
+      "theme": "science fiction"
+    },
+    {
+      "topic": "Helping a New Neighbor",
+      "description": "A family moves into the house next door.",
+      "context": "They are new to your town and do not know anyone yet.",
+      "question": "How would you make them feel welcome?",
+      "theme": "friendship"
+    },
+    {
+      "topic": "Morning Without Internet",
+      "description": "The internet suddenly stops working across your city.",
+      "context": "People must finish their daily tasks without online services for one day.",
+      "question": "How would your day change without the internet?",
+      "theme": "daily life"
+    },
+    {
+      "topic": "The Hidden Cave",
+      "description": "You discover a cave during a forest walk.",
+      "context": "A narrow path leads to a cave that does not appear on any map.",
+      "question": "What would you explore first inside the cave, and why?",
+      "theme": "adventure"
+    },
+    {
+      "topic": "Cooking With a Stranger",
+      "description": "You join a community cooking event.",
+      "context": "You are paired with someone you have never met to prepare a traditional meal.",
+      "question": "How would you work together to make the meal successful?",
+      "theme": "culture"
+    },
+    {
+      "topic": "The Talking Tree",
+      "description": "An old tree suddenly starts speaking to you.",
+      "context": "It says it has watched your town for hundreds of years.",
+      "question": "What would you ask the tree about its long life?",
+      "theme": "nature"
+    },
+    {
+      "topic": "Your Dream Job",
+      "description": "You are invited to describe your ideal career.",
+      "context": "Your teacher asks everyone to share their future work plans with the class.",
+      "question": "What kind of job would make you happiest, and why?",
+      "theme": "work"
+    },
+    {
+      "topic": "A Letter From the Future",
+      "description": "You receive a letter written by your future self.",
+      "context": "The letter gives advice but leaves many questions unanswered.",
+      "question": "What would you want to know most from your future self?",
+      "theme": "future"
+    },
+    {
+      "topic": "The School Festival",
+      "description": "Your class is preparing a fun festival booth.",
+      "context": "Everyone has different ideas about games, decorations, and activities.",
+      "question": "What would you suggest to make your booth popular?",
+      "theme": "education"
+    },
+    {
+      "topic": "A Healthy Challenge",
+      "description": "Your friends begin a month-long wellness challenge.",
+      "context": "Each person chooses one healthy habit to practice every day.",
+      "question": "Which healthy habit would you choose, and how would you stay motivated?",
+      "theme": "health"
+    },
+    {
+      "topic": "Movie Night Choice",
+      "description": "Your friends cannot agree on a movie.",
+      "context": "Everyone likes a different type of film, and you must help decide.",
+      "question": "How would you choose a movie that everyone can enjoy?",
+      "theme": "entertainment"
+    },
+    {
+      "topic": "The Science Fair",
+      "description": "You are creating a project for a science competition.",
+      "context": "You can build or demonstrate anything that teaches people something new.",
+      "question": "What experiment or invention would you present?",
+      "theme": "science fiction"
+    },
+    {
+      "topic": "The Forgotten Birthday",
+      "description": "You suddenly remember an important birthday at the last minute.",
+      "context": "You have only a few hours to plan something meaningful.",
+      "question": "How would you make the birthday special with limited time?",
+      "theme": "family"
+    }
+  ]
+}

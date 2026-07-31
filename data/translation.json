@@ -1,0 +1,404 @@
+{
+  "scenarios": [
+    {
+      "id": 1,
+      "scenario": "You wake up on an abandoned train in the forest. The doors are locked."
+    },
+    {
+      "id": 2,
+      "scenario": "A glowing door appears in your classroom wall after the teacher leaves."
+    },
+    {
+      "id": 3,
+      "scenario": "Your small spaceship loses power near a strange bright planet."
+    },
+    {
+      "id": 4,
+      "scenario": "You find a hidden laboratory under the school. Machines are still running."
+    },
+    {
+      "id": 5,
+      "scenario": "A stranger runs past and drops an old treasure map."
+    },
+    {
+      "id": 6,
+      "scenario": "You enter an old cabin in the forest. The door closes behind you."
+    },
+    {
+      "id": 7,
+      "scenario": "Sirens sound. Slow figures walk in the street outside your window."
+    },
+    {
+      "id": 8,
+      "scenario": "You discover stone steps leading into a forgotten ancient temple."
+    },
+    {
+      "id": 9,
+      "scenario": "A small robot walks up and says it needs a partner for a mission."
+    },
+    {
+      "id": 10,
+      "scenario": "While hiking you notice a narrow opening behind thick bushes."
+    },
+    {
+      "id": 11,
+      "scenario": "Your boat breaks near a small island during a sudden storm."
+    },
+    {
+      "id": 12,
+      "scenario": "A mysterious phone starts ringing at midnight with an unknown number."
+    },
+    {
+      "id": 13,
+      "scenario": "You touch an old clock and suddenly the year changes to 1920."
+    },
+    {
+      "id": 14,
+      "scenario": "Your radio picks up a strange signal from the sky at night."
+    },
+    {
+      "id": 15,
+      "scenario": "You walk into a quiet park and find a broken camera on the ground."
+    },
+    {
+      "id": 16,
+      "scenario": "While diving you notice a soft blue light coming from a rock crack."
+    },
+    {
+      "id": 17,
+      "scenario": "A client asks you to follow a man who always wears a black hat."
+    },
+    {
+      "id": 18,
+      "scenario": "A wooden bridge appears over a deep valley that was not there yesterday."
+    },
+    {
+      "id": 19,
+      "scenario": "Your group is lost in the mountains after dark. Temperature drops fast."
+    },
+    {
+      "id": 20,
+      "scenario": "You receive a sealed envelope with only your name on it."
+    },
+    {
+      "id": 21,
+      "scenario": "The lights suddenly go out in an empty school building."
+    },
+    {
+      "id": 22,
+      "scenario": "You find a silver key inside an old library book."
+    },
+    {
+      "id": 23,
+      "scenario": "A white owl lands on your window and looks straight at you."
+    },
+    {
+      "id": 24,
+      "scenario": "You wake up inside a locked escape room with only one small note."
+    },
+    {
+      "id": 25,
+      "scenario": "A black cat leads you down a dark alley at night."
+    },
+    {
+      "id": 26,
+      "scenario": "You discover a hidden tunnel behind a painting in a museum."
+    },
+    {
+      "id": 27,
+      "scenario": "Your compass starts spinning wildly in the middle of the desert."
+    },
+    {
+      "id": 28,
+      "scenario": "A paper bird flies into your room carrying a short message."
+    },
+    {
+      "id": 29,
+      "scenario": "You enter a market where everyone speaks in whispers."
+    },
+    {
+      "id": 30,
+      "scenario": "A frozen lake cracks under your feet but does not break."
+    },
+    {
+      "id": 31,
+      "scenario": "You find a golden leaf that never falls from its tree."
+    },
+    {
+      "id": 32,
+      "scenario": "A red notebook appears on your desk with today's date written inside."
+    },
+    {
+      "id": 33,
+      "scenario": "You hear soft singing coming from an empty well."
+    },
+    {
+      "id": 34,
+      "scenario": "A glass key fits a door that was never there before."
+    },
+    {
+      "id": 35,
+      "scenario": "You step into thick green fog and lose sight of the path."
+    },
+    {
+      "id": 36,
+      "scenario": "A silent bell rings once every hour in an abandoned church."
+    },
+    {
+      "id": 37,
+      "scenario": "You find footprints that start in the middle of a clean floor."
+    },
+    {
+      "id": 38,
+      "scenario": "A tiny door appears at the base of an old oak tree."
+    },
+    {
+      "id": 39,
+      "scenario": "You receive a ticket for a train that does not exist on any map."
+    },
+    {
+      "id": 40,
+      "scenario": "A talking tree asks you for help in a quiet forest."
+    },
+    {
+      "id": 41,
+      "scenario": "You open a painted box and see a map of a lost city."
+    },
+    {
+      "id": 42,
+      "scenario": "A heavy iron mask lies on a stone table in a cave."
+    },
+    {
+      "id": 43,
+      "scenario": "You follow a blue feather that keeps floating ahead of you."
+    },
+    {
+      "id": 44,
+      "scenario": "A wooden horse in a toy shop suddenly turns its head."
+    },
+    {
+      "id": 45,
+      "scenario": "You find a stone hand pointing toward the mountains."
+    },
+    {
+      "id": 46,
+      "scenario": "A yellow door appears in the middle of an empty field."
+    },
+    {
+      "id": 47,
+      "scenario": "Pink smoke rises from a crack in the laboratory floor."
+    },
+    {
+      "id": 48,
+      "scenario": "An orange light pulses inside a locked metal box."
+    },
+    {
+      "id": 49,
+      "scenario": "You open a purple book and the words start moving."
+    },
+    {
+      "id": 50,
+      "scenario": "A man in a grey suit knows your full name without asking."
+    },
+    {
+      "id": 51,
+      "scenario": "You discover a giant footprint next to your tent."
+    },
+    {
+      "id": 52,
+      "scenario": "A flying carpet is rolled up in the corner of an old shop."
+    },
+    {
+      "id": 53,
+      "scenario": "You rub a dusty lamp and hear a soft voice inside."
+    },
+    {
+      "id": 54,
+      "scenario": "A secret code is scratched into the back of a mirror."
+    },
+    {
+      "id": 55,
+      "scenario": "You find a hidden camera that is still recording."
+    },
+    {
+      "id": 56,
+      "scenario": "A strange package arrives with no return address."
+    },
+    {
+      "id": 57,
+      "scenario": "You open an empty suitcase and find a second bottom."
+    },
+    {
+      "id": 58,
+      "scenario": "An old ticket falls from a library book dated 1912."
+    },
+    {
+      "id": 59,
+      "scenario": "You receive a new passport with a country that does not exist."
+    },
+    {
+      "id": 60,
+      "scenario": "A lost letter is addressed to you from the future."
+    },
+    {
+      "id": 61,
+      "scenario": "You break a sealed envelope and a small key falls out."
+    },
+    {
+      "id": 62,
+      "scenario": "A broken chain lies on the floor of an empty prison cell."
+    },
+    {
+      "id": 63,
+      "scenario": "An open window in a locked room lets in cold night air."
+    },
+    {
+      "id": 64,
+      "scenario": "A closed shop has lights on and music playing inside."
+    },
+    {
+      "id": 65,
+      "scenario": "A clock runs backwards on the wall of a waiting room."
+    },
+    {
+      "id": 66,
+      "scenario": "A stopped watch starts ticking when you pick it up."
+    },
+    {
+      "id": 67,
+      "scenario": "A burning candle does not melt no matter how long it burns."
+    },
+    {
+      "id": 68,
+      "scenario": "Melting ice on a table reveals a metal box underneath."
+    },
+    {
+      "id": 69,
+      "scenario": "Rising water in a basement shows old writing on the walls."
+    },
+    {
+      "id": 70,
+      "scenario": "A falling leaf lands and turns into a small paper map."
+    },
+    {
+      "id": 71,
+      "scenario": "A growing plant in a pot has leaves shaped like keys."
+    },
+    {
+      "id": 72,
+      "scenario": "The ground shakes once and a new path appears in the rocks."
+    },
+    {
+      "id": 73,
+      "scenario": "A bright flash in the sky leaves a glowing mark on the ground."
+    },
+    {
+      "id": 74,
+      "scenario": "A soft click comes from inside a locked drawer."
+    },
+    {
+      "id": 75,
+      "scenario": "A loud knock sounds on a door that has no building behind it."
+    },
+    {
+      "id": 76,
+      "scenario": "Quiet footsteps follow you even when you stop walking."
+    },
+    {
+      "id": 77,
+      "scenario": "You hear heavy breathing from an empty room next door."
+    },
+    {
+      "id": 78,
+      "scenario": "Cold wind blows from a closed window in summer."
+    },
+    {
+      "id": 79,
+      "scenario": "A warm hand touches your shoulder but nobody is there."
+    },
+    {
+      "id": 80,
+      "scenario": "A strange sweet smell comes from an old laboratory bottle."
+    },
+    {
+      "id": 81,
+      "scenario": "You taste salt in the air far from any sea."
+    },
+    {
+      "id": 82,
+      "scenario": "A dusty room becomes clean by itself overnight."
+    },
+    {
+      "id": 83,
+      "scenario": "A wet path appears on dry ground after you walk past."
+    },
+    {
+      "id": 84,
+      "scenario": "A dry river bed starts to fill with clear water."
+    },
+    {
+      "id": 85,
+      "scenario": "You find a robot companion that has lost its memory."
+    },
+    {
+      "id": 86,
+      "scenario": "An alien signal draws a circle of light around your camp."
+    },
+    {
+      "id": 87,
+      "scenario": "You enter a magic school through a mirror in the hallway."
+    },
+    {
+      "id": 88,
+      "scenario": "A spy hands you a small paper and disappears into the crowd."
+    },
+    {
+      "id": 89,
+      "scenario": "You wake up in a different year after touching a museum clock."
+    },
+    {
+      "id": 90,
+      "scenario": "A detective needs your help to follow a man in a black hat."
+    },
+    {
+      "id": 91,
+      "scenario": "You discover an underwater tunnel that glows soft blue."
+    },
+    {
+      "id": 92,
+      "scenario": "A treasure chest is half buried under the sand of a small island."
+    },
+    {
+      "id": 93,
+      "scenario": "You are locked inside a secret government laboratory at night."
+    },
+    {
+      "id": 94,
+      "scenario": "A haunted radio plays your name in a soft voice."
+    },
+    {
+      "id": 95,
+      "scenario": "You find a time machine made from old train parts."
+    },
+    {
+      "id": 96,
+      "scenario": "A zombie walks slowly past your window but does not see you."
+    },
+    {
+      "id": 97,
+      "scenario": "You enter an ancient temple that only appears at midnight."
+    },
+    {
+      "id": 98,
+      "scenario": "A school bus takes a wrong turn into a forest that is not on maps."
+    },
+    {
+      "id": 99,
+      "scenario": "You receive a mission from an AI that lives inside an old computer."
+    },
+    {
+      "id": 100,
+      "scenario": "A lost city rises from the desert for only one night."
+    }
+  ]
+}
