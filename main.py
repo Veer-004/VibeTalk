@@ -3,10 +3,9 @@ main.py — VibeTalk entry point.
 Run with:  streamlit run main.py
 """
 
-import streamlit as st
-from dotenv import load_dotenv
+import config  # noqa: F401  — must be first to load secrets
 
-load_dotenv()
+import streamlit as st
 
 st.set_page_config(
     page_title="VibeTalk",
