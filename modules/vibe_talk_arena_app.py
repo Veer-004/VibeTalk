@@ -5,17 +5,15 @@ Session-state keys are prefixed with `cb_` to avoid clashing with the coach page
 """
 
 import io
-import os
 import asyncio
 import re
+import time
 import streamlit as st
 from langchain_core.messages import HumanMessage
-from groq import Groq
 import edge_tts
 
 from engines.vibe_talk_arena_bot import start_app, turn_app, ChatState
-
-_groq_client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+from modules.nvidia_asr import transcribe_audio
 
 # Characters/symbols we never want the voice to read out loud.
 _STRIP_CHARS = '_:;"“”‘’`*#|~<>[]{}()'
@@ -46,18 +44,6 @@ def _clean_for_speech(text: str) -> str:
     return text
 
 
-def _transcribe_audio(audio_bytes: bytes) -> str:
-    audio_file = io.BytesIO(audio_bytes)
-    audio_file.name = "voice.wav"
-    result = _groq_client.audio.transcriptions.create(
-        file=audio_file,
-        model="whisper-large-v3-turbo",
-        language="en",
-        temperature=0.0,
-    )
-    return result.text.strip()
-
-
 async def _tts(text: str) -> bytes:
     communicate = edge_tts.Communicate(text, "en-US-JennyNeural")
     buf = io.BytesIO()
@@ -68,14 +54,20 @@ async def _tts(text: str) -> bytes:
     return buf.read()
 
 
-def _text_to_speech(text: str):
+def _text_to_speech(text: str, retries: int = 3):
+    """edge-tts occasionally drops the connection to Microsoft's speech
+    service (transient network errors), so retry a few times before
+    giving up rather than silently returning no audio."""
     clean = _clean_for_speech(text)
     if not clean:
         return None
-    try:
-        return asyncio.run(_tts(clean))
-    except Exception:
-        return None
+    for attempt in range(retries):
+        try:
+            return asyncio.run(_tts(clean))
+        except Exception:
+            if attempt < retries - 1:
+                time.sleep(0.5)
+    return None
 
 
 def _init_state():
@@ -159,10 +151,13 @@ def render():
         st.session_state.cb_conversation_ended = result.get("conversation_ended", False)
         st.session_state.cb_final_review = result.get("final_review", "")
 
-        if auto_speak and result["messages"]:
-            st.session_state.cb_last_bot_audio = _text_to_speech(
-                result["messages"][-1].content
-            )
+        if auto_speak:
+            if st.session_state.cb_conversation_ended:
+                speak_text = st.session_state.cb_final_review
+            else:
+                speak_text = result["messages"][-1].content if result["messages"] else ""
+            if speak_text:
+                st.session_state.cb_last_bot_audio = _text_to_speech(speak_text)
         st.rerun()
 
     # 2. Start a new topic only once
@@ -179,8 +174,13 @@ def render():
                 )
             st.rerun()
 
-    # 3. Show conversation
-    for msg in st.session_state.cb_messages:
+    # 3. Show conversation (the final review is rendered separately below,
+    # so skip it here to avoid showing it twice).
+    chat_messages = st.session_state.cb_messages
+    if st.session_state.cb_conversation_ended and chat_messages:
+        chat_messages = chat_messages[:-1]
+
+    for msg in chat_messages:
         role = "user" if isinstance(msg, HumanMessage) else "assistant"
         with st.chat_message(role):
             st.markdown(msg.content)
@@ -191,7 +191,10 @@ def render():
 
     # 4. Input area
     if st.session_state.cb_conversation_ended:
-        st.success("Chat finished! Check the review above.")
+        st.markdown("---")
+        st.markdown("### 📋 Your Assessment")
+        st.info(st.session_state.cb_final_review)
+        st.success("Chat finished! Check your assessment above.")
         if st.button("🔄 New conversation", type="primary", key="cb_new_conv"):
             _reset_conversation()
             st.rerun()
@@ -205,7 +208,7 @@ def render():
             if audio is not None:
                 with st.spinner("Listening..."):
                     try:
-                        text = _transcribe_audio(audio.getvalue())
+                        text = transcribe_audio(audio.getvalue())
                         if text:
                             st.session_state.cb_pending_user_text = text
                             st.session_state.cb_mic_key += 1

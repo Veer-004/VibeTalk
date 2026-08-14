@@ -15,17 +15,15 @@ Session-state keys are prefixed with `sc_` to avoid clashing with Arena.
 
 import asyncio
 import io
-import os
 import re
+import time
 
 import edge_tts
 import streamlit as st
-from groq import Groq
 from langchain_core.messages import HumanMessage
 
 from engines.vibe_talk_express_bot import start_app, turn_app, ExpressState
-
-_groq_client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+from modules.nvidia_asr import transcribe_audio
 
 # Characters/symbols we never want the voice to read out loud.
 _STRIP_CHARS = '_:;\u201c\u201d\u201e\u2018\u2019\u201a`*#|~<>[]{}()'
@@ -56,18 +54,6 @@ def _clean_for_speech(text: str) -> str:
     return text
 
 
-def _transcribe_audio(audio_bytes: bytes) -> str:
-    audio_file = io.BytesIO(audio_bytes)
-    audio_file.name = "voice.wav"
-    result = _groq_client.audio.transcriptions.create(
-        file=audio_file,
-        model="whisper-large-v3-turbo",
-        language="en",
-        temperature=0.0,
-    )
-    return result.text.strip()
-
-
 async def _tts(text: str) -> bytes:
     communicate = edge_tts.Communicate(text, "en-US-JennyNeural")
     buf = io.BytesIO()
@@ -78,14 +64,20 @@ async def _tts(text: str) -> bytes:
     return buf.read()
 
 
-def _text_to_speech(text: str):
+def _text_to_speech(text: str, retries: int = 3):
+    """edge-tts occasionally drops the connection to Microsoft's speech
+    service (transient network errors), so retry a few times before
+    giving up rather than silently returning no audio."""
     clean = _clean_for_speech(text)
     if not clean:
         return None
-    try:
-        return asyncio.run(_tts(clean))
-    except Exception:
-        return None
+    for attempt in range(retries):
+        try:
+            return asyncio.run(_tts(clean))
+        except Exception:
+            if attempt < retries - 1:
+                time.sleep(0.5)
+    return None
 
 
 # ------------------------------------------------------------------
@@ -206,14 +198,19 @@ def render():
 
         _sync_from_result(result)
 
-        if auto_speak and result["messages"]:
-            # Speak only the bot's English reply (last AI message)
-            last_ai = result["messages"][-1]
-            if isinstance(last_ai, HumanMessage):
-                # Shouldn't happen, but safeguard
-                st.session_state.sc_last_bot_audio = None
-            else:
-                st.session_state.sc_last_bot_audio = _text_to_speech(last_ai.content)
+        if auto_speak:
+            if st.session_state.sc_conversation_ended:
+                st.session_state.sc_last_bot_audio = _text_to_speech(
+                    st.session_state.sc_final_review
+                )
+            elif result["messages"]:
+                # Speak only the bot's English reply (last AI message)
+                last_ai = result["messages"][-1]
+                if isinstance(last_ai, HumanMessage):
+                    # Shouldn't happen, but safeguard
+                    st.session_state.sc_last_bot_audio = None
+                else:
+                    st.session_state.sc_last_bot_audio = _text_to_speech(last_ai.content)
         st.rerun()
 
     # ---- 2. Start a new topic only once ----
@@ -231,8 +228,13 @@ def render():
                 st.session_state.sc_last_bot_audio = _text_to_speech(english_part)
             st.rerun()
 
-    # ---- 3. Show conversation (Arena-style chat bubbles) ----
-    for msg in st.session_state.sc_messages:
+    # ---- 3. Show conversation (Arena-style chat bubbles). The final review
+    # is rendered separately below, so skip it here to avoid showing it twice.
+    chat_messages = st.session_state.sc_messages
+    if st.session_state.sc_conversation_ended and chat_messages:
+        chat_messages = chat_messages[:-1]
+
+    for msg in chat_messages:
         role = "user" if isinstance(msg, HumanMessage) else "assistant"
         with st.chat_message(role):
             st.markdown(msg.content)
@@ -250,7 +252,10 @@ def render():
 
     # ---- 5. Input area ----
     if st.session_state.sc_conversation_ended:
-        st.success("Conversation finished! Check the review above.")
+        st.markdown("---")
+        st.markdown("### \U0001F4CB Your Assessment")
+        st.info(st.session_state.sc_final_review)
+        st.success("Conversation finished! Check your assessment above.")
         if st.button("\U0001F504 New conversation", type="primary", key="sc_new_conv"):
             _reset_conversation()
             st.rerun()
@@ -264,7 +269,7 @@ def render():
             if audio is not None:
                 with st.spinner("Listening..."):
                     try:
-                        text = _transcribe_audio(audio.getvalue())
+                        text = transcribe_audio(audio.getvalue())
                         if text:
                             st.session_state.sc_pending_user_text = text
                             st.session_state.sc_mic_key += 1

@@ -18,9 +18,9 @@ load_dotenv()
 
 # 2. Push Streamlit Cloud secrets into os.environ
 #    so that os.getenv() and libraries that read env-vars
-#    (LangChain, Groq SDK) all just work.
+#    (LangChain, NVIDIA SDKs) all just work.
 _REQUIRED_KEYS = [
-    "GROQ_API_KEY",
+    "NVIDIA_API_KEY",
     "LANGCHAIN_TRACING_V2",
     "LANGCHAIN_API_KEY",
     "LANGCHAIN_PROJECT",

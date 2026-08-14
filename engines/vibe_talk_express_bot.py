@@ -25,9 +25,9 @@ import re
 from typing import Annotated, Any, Dict, List
 
 from dotenv import load_dotenv
-from groq import Groq
+from openai import OpenAI
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
-from langchain_groq import ChatGroq
+from langchain_nvidia_ai_endpoints import ChatNVIDIA
 from langgraph.graph import END, START, StateGraph
 from langgraph.graph.message import add_messages
 from typing_extensions import TypedDict
@@ -47,12 +47,20 @@ EXIT_SCORE_THRESHOLD = 8
 # ------------------------------------------------------------------
 # LLM Setup
 # ------------------------------------------------------------------
-llm = ChatGroq(
-    model="llama-3.1-8b-instant",
+NVIDIA_MODEL = "meta/llama-3.1-8b-instruct"
+
+llm = ChatNVIDIA(
+    model=NVIDIA_MODEL,
     temperature=0.7,
+    api_key=os.getenv("NVIDIA_API_KEY"),
 )
 
-groq_raw = Groq(api_key=os.getenv("GROQ_API_KEY"))
+# Raw OpenAI-compatible client for the JSON-mode evaluation call below,
+# pointed at NVIDIA's NIM endpoint instead of OpenAI's.
+nvidia_raw = OpenAI(
+    base_url="https://integrate.api.nvidia.com/v1",
+    api_key=os.getenv("NVIDIA_API_KEY"),
+)
 
 
 # ------------------------------------------------------------------
@@ -152,8 +160,8 @@ Reply ONLY with valid JSON:
   "feedback": "<one short sentence>",
   "ideal": "<one natural A1 English sentence that translates the Hindi>"
 }}"""
-        resp = groq_raw.chat.completions.create(
-            model="llama-3.1-8b-instant",
+        resp = nvidia_raw.chat.completions.create(
+            model=NVIDIA_MODEL,
             messages=[{"role": "user", "content": prompt}],
             temperature=0.2,
             max_tokens=200,
@@ -259,11 +267,20 @@ def start_topic_node(state: ExpressState) -> dict:
 # TURN GRAPH — Exit check → Chat or Farewell
 # ------------------------------------------------------------------
 EXIT_SYSTEM_PROMPT = (
-    "Does the user want to END the chat?\n"
-    "Reply with ONLY a number 0-10.\n"
-    "0-3 = normal talk\n"
-    "7-10 = goodbye / bye / stop / quit / see you / I have to go / end\n"
-    "When unsure, give LOW score."
+    "You are analyzing ONE message from an English-practice chat.\n"
+    "Decide if the user is trying to END the conversation (saying goodbye, "
+    "asking to stop/quit, or clearly signaling they want to leave).\n"
+    "Reply with ONLY a single digit 0-10. No words, no explanation, no punctuation.\n\n"
+    "0-3 = the user is continuing the conversation normally (agreeing, disagreeing, "
+    "sharing an opinion, asking a question, making small talk, etc.)\n"
+    "7-10 = the user is clearly saying goodbye / bye / stop / quit / see you / "
+    "I have to go / let's end this\n\n"
+    "If the message does NOT explicitly signal leaving, you MUST answer 0.\n\n"
+    "Examples:\n"
+    "Message: \"But robots are consistent every single time.\" -> 0\n"
+    "Message: \"I have to go now, bye!\" -> 9\n"
+    "Message: \"That's a great point, I agree.\" -> 0\n"
+    "Message: \"Can we stop here for today?\" -> 8\n"
 )
 
 

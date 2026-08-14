@@ -7,7 +7,7 @@ Fast + beginner-friendly. Human-like chat + soft ending after long conversations
 from typing import Annotated, TypedDict
 from dotenv import load_dotenv
 from langchain_core.messages import HumanMessage, SystemMessage, AIMessage
-from langchain_groq import ChatGroq
+from langchain_nvidia_ai_endpoints import ChatNVIDIA
 from langgraph.graph import END, START, StateGraph
 from langgraph.graph.message import add_messages
 import random
@@ -17,13 +17,14 @@ import re
 
 load_dotenv()
 
-llm = ChatGroq(
-    model="llama-3.1-8b-instant",
+llm = ChatNVIDIA(
+    model="meta/llama-3.1-8b-instruct",
     temperature=0.75,
+    api_key=os.getenv("NVIDIA_API_KEY"),
 )
 
-SOFT_ENDING_TURN = 9
-FORCE_ENDING_TURN = 12
+SOFT_ENDING_TURN = 7
+FORCE_ENDING_TURN = 11
 EXIT_SCORE_THRESHOLD = 8
 
 # Engines live in src/vibetalk/engines/, JSON data lives in src/vibetalk/data/
@@ -281,11 +282,20 @@ def start_topic_node(state: ChatState) -> dict:
 
 
 EXIT_SYSTEM_PROMPT = (
-    "Does the user want to END the chat?\n"
-    "Reply with ONLY a number 0-10.\n"
-    "0-3 = normal talk\n"
-    "7-10 = goodbye / bye / stop / quit / see you / I have to go / end\n"
-    "When unsure, give LOW score."
+    "You are analyzing ONE message from an English-practice chat.\n"
+    "Decide if the user is trying to END the conversation (saying goodbye, "
+    "asking to stop/quit, or clearly signaling they want to leave).\n"
+    "Reply with ONLY a single digit 0-10. No words, no explanation, no punctuation.\n\n"
+    "0-3 = the user is continuing the conversation normally (agreeing, disagreeing, "
+    "sharing an opinion, asking a question, making small talk, etc.)\n"
+    "7-10 = the user is clearly saying goodbye / bye / stop / quit / see you / "
+    "I have to go / let's end this\n\n"
+    "If the message does NOT explicitly signal leaving, you MUST answer 0.\n\n"
+    "Examples:\n"
+    "Message: \"But robots are consistent every single time.\" -> 0\n"
+    "Message: \"I have to go now, bye!\" -> 9\n"
+    "Message: \"That's a great point, I agree.\" -> 0\n"
+    "Message: \"Can we stop here for today?\" -> 8\n"
 )
 
 

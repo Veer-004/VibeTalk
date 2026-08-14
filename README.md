@@ -1,6 +1,6 @@
 # VibeTalk
 
-English speaking practice with two modules (LangGraph + Groq).
+English speaking practice with two modules (LangGraph + NVIDIA API for chat, NVIDIA Parakeet for voice input).
 
 - **🎭 VibeTalk Arena** — free chat: roleplay / debate / discussion.
 - **🗣️ VibeTalk Express** — Hindi→English translation practice.
@@ -11,7 +11,7 @@ English speaking practice with two modules (LangGraph + Groq).
 vibetalk/
 ├── main.py              # run this
 ├── requirements.txt
-├── .env                 # you add: GROQ_API_KEY=your_key
+├── .env                 # you add: NVIDIA_API_KEY=your_key
 ├── engines/             # backend (LangGraph)
 │   ├── vibe_talk_arena_bot.py
 │   └── vibe_talk_express_bot.py
@@ -29,7 +29,7 @@ vibetalk/
 
 ```bash
 pip install -r requirements.txt
-# create a .env file containing:  GROQ_API_KEY=your_key_here
+# create a .env file containing:  NVIDIA_API_KEY=your_key_here
 streamlit run main.py
 ```
 
