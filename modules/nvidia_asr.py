@@ -2,8 +2,7 @@
 nvidia_asr.py — Speech-to-text via NVIDIA's hosted Parakeet 1.1B RNNT
 Multilingual ASR model (NVCF-hosted Riva endpoint on build.nvidia.com).
 
-Shared by vibe_talk_arena_app.py and vibe_talk_express_app.py so both
-voice-input flows hit the same NVIDIA endpoint.
+Used by vibe_talk_arena_app.py for its voice-input flow.
 """
 
 import os

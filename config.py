@@ -21,6 +21,11 @@ load_dotenv()
 #    (LangChain, NVIDIA SDKs) all just work.
 _REQUIRED_KEYS = [
     "NVIDIA_API_KEY",
+    "DB_HOST",
+    "DB_PORT",
+    "DB_NAME",
+    "DB_USER",
+    "DB_PASSWORD",
     "LANGCHAIN_TRACING_V2",
     "LANGCHAIN_API_KEY",
     "LANGCHAIN_PROJECT",

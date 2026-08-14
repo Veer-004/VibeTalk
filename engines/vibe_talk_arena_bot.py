@@ -23,6 +23,16 @@ llm = ChatNVIDIA(
     api_key=os.getenv("NVIDIA_API_KEY"),
 )
 
+# A separate, near-zero-temperature instance for classification (exit-intent
+# scoring). Reusing the creative `llm` (temperature=0.75) for a "reply with
+# only a digit" task made the score noisy enough to randomly misfire on
+# ordinary replies and end conversations early.
+classifier_llm = ChatNVIDIA(
+    model="meta/llama-3.1-8b-instruct",
+    temperature=0.0,
+    api_key=os.getenv("NVIDIA_API_KEY"),
+)
+
 SOFT_ENDING_TURN = 7
 FORCE_ENDING_TURN = 11
 EXIT_SCORE_THRESHOLD = 8
@@ -90,10 +100,19 @@ EXIT_KEYWORDS = (
     "end chat", "i'm done", "im done",
 )
 
+# Word-boundary matching, not plain substring: a naive `in` check made "see
+# you" match inside "see your" (as in "I see your point, but I disagree"),
+# "quit" match inside "quite", and "stop" match inside "stopped"/"stopping"
+# — all common in normal debate/roleplay replies, causing false "user wants
+# to end the chat" hits and premature endings.
+_EXIT_KEYWORD_PATTERN = re.compile(
+    r"\b(?:" + "|".join(re.escape(k) for k in EXIT_KEYWORDS) + r")\b",
+    re.IGNORECASE,
+)
+
 
 def looks_like_exit(text: str) -> bool:
-    low = text.lower()
-    return any(k in low for k in EXIT_KEYWORDS)
+    return bool(_EXIT_KEYWORD_PATTERN.search(text))
 
 
 def load_scenario(conversation_type: int) -> dict:
@@ -299,23 +318,40 @@ EXIT_SYSTEM_PROMPT = (
 )
 
 
+def _classify_exit_score(user_text: str) -> int:
+    response = classifier_llm.invoke(
+        [SystemMessage(content=EXIT_SYSTEM_PROMPT), HumanMessage(content=user_text)]
+    )
+    return parse_score(response.content)
+
+
 def exit_check_node(state: ChatState) -> dict:
     user_text = get_last_user_message(state)
     if not user_text:
         return {"exit_score": 0}
     if looks_like_exit(user_text):
         return {"exit_score": 10}
-    response = llm.invoke(
-        [SystemMessage(content=EXIT_SYSTEM_PROMPT), HumanMessage(content=user_text)]
-    )
-    return {"exit_score": parse_score(response.content)}
+
+    # Even at temperature=0 the hosted model occasionally misfires a high
+    # score on an ordinary reply (hosted-inference nondeterminism). Only
+    # trust a high score once a second, independent call confirms it, so a
+    # single noisy reading can't end the conversation early.
+    first_score = _classify_exit_score(user_text)
+    if first_score < EXIT_SCORE_THRESHOLD:
+        return {"exit_score": first_score}
+    second_score = _classify_exit_score(user_text)
+    return {"exit_score": min(first_score, second_score)}
 
 
 FAREWELL_AND_REVIEW_PROMPT = """
-The conversation has ended. Write a short, friendly English review.
+The conversation has ended. Write a short, friendly English review of the
+USER's English (the "user" role messages) — never review or correct your
+own ("assistant" role) messages, since you are the coach, not the student.
 
 1. Detect the style (casual chat, roleplay, debate, etc.).
-2. Only correct things that actually hurt understanding (max 3).
+2. Only correct things the USER wrote that actually hurt understanding
+   (max 3). Never produce a correction block for something you (the
+   assistant) said.
    Use EXACTLY this format, one block per correction, nothing extra on these lines:
      SAID: <exactly what the user wrote>
      BETTER: <the improved version>
@@ -348,11 +384,81 @@ def format_review(raw: str) -> str:
     return "\n".join(out)
 
 
+_INTRO_SEPARATOR = "\n\n━━━━━━━━━━━━━━━━━━━━━\n\n"
+
+
+def _build_review_transcript(messages: list) -> list:
+    """Strip the decorative scenario-header block (topic/character/setting
+    labels) from the very first bot message before handing the history to
+    the review LLM. Left in, a small model can mistake that formatted intro
+    text for something the user said, producing bogus corrections."""
+    cleaned = []
+    first_ai_seen = False
+    for m in messages:
+        if isinstance(m, AIMessage) and not first_ai_seen:
+            first_ai_seen = True
+            content = m.content
+            if _INTRO_SEPARATOR in content:
+                content = content.split(_INTRO_SEPARATOR, 1)[1]
+            cleaned.append(AIMessage(content=content))
+        else:
+            cleaned.append(m)
+    return cleaned
+
+
+_REVIEW_NOW_INSTRUCTION = (
+    "The conversation above has ended. Write the structured review now, "
+    "covering strengths and tips exactly as instructed above. Do not just "
+    "reply with a casual goodbye or farewell message — write the full review."
+)
+
+FALLBACK_REVIEW = (
+    "Great job finishing the conversation!\n\n"
+    "**Strengths:**\n"
+    "- You stayed engaged and kept the conversation going.\n"
+    "- You expressed your opinions clearly.\n"
+    "- You responded thoughtfully to the topic.\n\n"
+    "**Tips for next time:**\n"
+    "1. Try adding a few more details to your answers.\n"
+    "2. Ask follow-up questions to keep the conversation flowing.\n"
+    "3. Don't be afraid to disagree and explain why.\n\n"
+    "Keep practicing, you're doing great!"
+)
+
+
+def _looks_like_real_review(text: str) -> bool:
+    """A real review is substantial and mentions strengths/tips. Guards
+    against the model just echoing a casual goodbye instead of writing the
+    review — which happens when the user's last message was itself a
+    farewell, since a small model tends to keep that casual tone going."""
+    lower = text.lower()
+    return len(text.split()) >= 40 and ("strength" in lower or "tip" in lower)
+
+
 def farewell_and_review_node(state: ChatState) -> dict:
-    response = llm.invoke(
-        [SystemMessage(content=FAREWELL_AND_REVIEW_PROMPT)] + state["messages"]
+    transcript = _build_review_transcript(state["messages"])
+    review_messages = (
+        [SystemMessage(content=FAREWELL_AND_REVIEW_PROMPT)]
+        + transcript
+        + [HumanMessage(content=_REVIEW_NOW_INSTRUCTION)]
     )
+
+    response = llm.invoke(review_messages)
     reviewed = format_review(ensure_terminal_punctuation(response.content))
+
+    if not _looks_like_real_review(reviewed):
+        retry_response = llm.invoke(
+            review_messages
+            + [AIMessage(content=response.content)]
+            + [HumanMessage(content="That was not a review. Write the full "
+                                     "structured review with Strengths and "
+                                     "Tips sections now.")]
+        )
+        reviewed = format_review(ensure_terminal_punctuation(retry_response.content))
+
+    if not _looks_like_real_review(reviewed):
+        reviewed = FALLBACK_REVIEW
+
     return {
         "messages": [AIMessage(content=reviewed)],
         "conversation_ended": True,
