@@ -269,8 +269,12 @@ def render():
 
         st.session_state.cb_messages.append(HumanMessage(content=user_text))
 
-        with st.spinner("Thinking…"):
-            result = turn_app.invoke(_get_state(), config={"run_name": "Arena-Turn"})
+        try:
+            with st.spinner("Thinking…"):
+                result = turn_app.invoke(_get_state(), config={"run_name": "Arena-Turn"})
+        except Exception as e:
+            st.error(f"🤖 AI engine error: {e}")
+            st.stop()
 
         st.session_state.cb_messages = result["messages"]
         st.session_state.cb_conversation_ended = result.get("conversation_ended", False)
@@ -287,17 +291,21 @@ def render():
 
     # 2. Start a new topic only once
     if not st.session_state.cb_topic_started and not st.session_state.cb_conversation_ended:
-        with st.spinner("Starting a fun topic..."):
-            result = start_app.invoke(_get_state(), config={"run_name": "Arena-Start"})
-            st.session_state.cb_messages = result["messages"]
-            st.session_state.cb_topic_started = True
-            st.session_state.cb_scenario_data = result.get("scenario_data", {})
-            st.session_state.cb_conversation_type = result.get("conversation_type", "")
-            if auto_speak and result["messages"]:
-                st.session_state.cb_last_bot_audio = _text_to_speech(
-                    result["messages"][-1].content
-                )
-            st.rerun()
+        try:
+            with st.spinner("Starting a fun topic..."):
+                result = start_app.invoke(_get_state(), config={"run_name": "Arena-Start"})
+        except Exception as e:
+            st.error(f"🤖 AI engine error: {e}")
+            st.stop()
+        st.session_state.cb_messages = result["messages"]
+        st.session_state.cb_topic_started = True
+        st.session_state.cb_scenario_data = result.get("scenario_data", {})
+        st.session_state.cb_conversation_type = result.get("conversation_type", "")
+        if auto_speak and result["messages"]:
+            st.session_state.cb_last_bot_audio = _text_to_speech(
+                result["messages"][-1].content
+            )
+        st.rerun()
 
     # 3. Show conversation (the final review is rendered separately below,
     # so skip it here to avoid showing it twice).
