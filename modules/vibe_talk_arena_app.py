@@ -139,7 +139,7 @@ def _archive_current_conversation():
         for m in st.session_state.cb_messages
     ]
     try:
-        chat_history_db.save_chat({
+        chat_history_db.save_chat(st.session_state.auth_user, {
             "id": str(uuid.uuid4()),
             "conversation_type": st.session_state.cb_conversation_type,
             "title": title,
@@ -200,7 +200,7 @@ def render():
                 st.rerun()
 
         try:
-            history_rows = chat_history_db.list_chats()
+            history_rows = chat_history_db.list_chats(st.session_state.auth_user)
             history_error = False
         except Exception:
             history_rows = []
@@ -232,7 +232,9 @@ def render():
     # 0. Viewing a saved past conversation (read-only) instead of the live chat
     if st.session_state.cb_viewing_history_id:
         try:
-            entry = chat_history_db.get_chat(st.session_state.cb_viewing_history_id)
+            entry = chat_history_db.get_chat(
+                st.session_state.cb_viewing_history_id, st.session_state.auth_user
+            )
         except Exception:
             st.error("⚠️ Couldn't load that saved conversation (MySQL unreachable).")
             if st.button("← Back to current chat"):

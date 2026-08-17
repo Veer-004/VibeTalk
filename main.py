@@ -13,6 +13,10 @@ st.set_page_config(
     layout="centered",
 )
 
+from auth.auth import require_login, render_logout_control
+
+require_login()
+
 from modules import vibe_talk_arena_app
 
 ARENA = "🎭 VibeTalk Arena"
@@ -59,3 +63,5 @@ if choice is None:
     render_landing()
 else:
     PAGES[choice]()
+
+render_logout_control()

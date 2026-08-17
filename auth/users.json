@@ -1,0 +1,22 @@
+{
+  "veer": {
+    "display_name": "Veer",
+    "password_hash": "$2b$12$dZ3ezl0Z1RQrvTRyvXVtDOzDxTwqRxITezPu./EajT7gj2Mv4vvZO"
+  },
+  "hemal": {
+    "display_name": "Hemal",
+    "password_hash": "$2b$12$ioZnVH2N2MC7ii9ufPjX6uCfxEW.eqixOyBRUiqyMND7ob1/IUtgi"
+  },
+  "sweety": {
+    "display_name": "Sweety",
+    "password_hash": "$2b$12$FanWJRSE.hbRr9aLultyz.S7IIgSxuBDL0dvoP24Fuk87RqG/dn5m"
+  },
+  "phantom": {
+    "display_name": "Phantom",
+    "password_hash": "$2b$12$dl3PZbax8Y95HJg4EH9W0.lSxkieWX585nJgWv06Kxp7JRcXKOUc6"
+  },
+  "vtbot": {
+    "display_name": "VTBot",
+    "password_hash": "$2b$12$aLoCa.TpHzOob/uByLOggewVkO28fC1Hg/kumFXxYQHUwGWWqeOee"
+  }
+}
